@@ -1,0 +1,31 @@
+---
+title: "20160409Demo"
+author: "David Chiu"
+date: "2016年4月9日"
+output: html_document
+---
+### GET appledaily
+```{r}
+library(httr)
+res <- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
+res
+
+```
+
+### POST THSRC
+```{r}
+library(httr)
+url <- "https://www.thsrc.com.tw/tw/TimeTable/SearchResult"
+payload <- list(
+  StartStation='977abb69-413a-4ccf-a109-0272c24fd490',
+  EndStation='fbd828d8-b1da-4b06-a3bd-680cdca4d2cd',
+  SearchDate='2016/04/04',
+  SearchTime='15:00',
+  SearchWay='DepartureInMandarin'
+)
+
+res<-POST(url, body=payload, encode="form")
+res
+
+```
+
