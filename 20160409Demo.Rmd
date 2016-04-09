@@ -90,10 +90,21 @@ iris %>% head() %>% .[3,] %>% .['Sepal.Length'] %>% tail(1)
 library(httr)
 library(rvest)
 res <- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
+
+# harvest by tag name : time
 content(res) %>% html_nodes('time') %>% .[1]
 content(res) %>% html_nodes('h1.dddd time') 
 content(res) %>% html_nodes('#maincontent > div.thoracis > div.abdominis.rlby.clearmen > h1 > time') %>% html_text()
 
+# harvest by css ID: maincontent
+content(res) %>% html_nodes('#maincontent') 
+
+
+# harvest by css class: rtddt
+content(res) %>% html_nodes('.rtddt') 
+
+# harvest by list li with css class: rtddt
+content(res) %>% html_nodes('li.rtddt') 
 ```
 
 
