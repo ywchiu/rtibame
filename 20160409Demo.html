@@ -121,10 +121,10 @@ $(document).ready(function () {
 res &lt;- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
 res</code></pre>
 <pre><code>## Response [http://www.appledaily.com.tw/realtimenews/section/new/]
-##   Date: 2016-04-09 07:29
+##   Date: 2016-04-09 08:40
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
-##   Size: 72.9 kB
+##   Size: 71.2 kB
 ## &lt;!DOCTYPE html&gt;
 ## &lt;!--[if lt IE 7 ]&gt; &lt;html lang=&quot;zh-TW&quot; class=&quot;ie6 ielt8&quot;&gt; &lt;![endif]--&gt;
 ## &lt;!--[if IE 7 ]&gt;    &lt;html lang=&quot;zh-TW&quot; class=&quot;ie7 ielt8&quot;&gt; &lt;![endif]--&gt;
@@ -152,7 +152,7 @@ payload &lt;- list(
 res&lt;-POST(url, body=payload, encode=&quot;form&quot;)
 res</code></pre>
 <pre><code>## Response [https://www.thsrc.com.tw/tw/TimeTable/SearchResult]
-##   Date: 2016-04-09 07:29
+##   Date: 2016-04-09 08:40
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
 ##   Size: 95.5 kB
@@ -214,10 +214,10 @@ p1</code></pre>
 qoo &lt;- GET('http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&amp;searchdate=2016/04/09&amp;fromstation=1810&amp;tostation=1008&amp;trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271108%27,%271110%27,%271120%27&amp;fromtime=0600&amp;totime=2359')
 qoo</code></pre>
 <pre><code>## Response [http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&amp;searchdate=2016/04/09&amp;fromstation=1810&amp;tostation=1008&amp;trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271108%27,%271110%27,%271120%27&amp;fromtime=0600&amp;totime=2359]
-##   Date: 2016-04-09 07:29
+##   Date: 2016-04-09 08:41
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
-##   Size: 18.2 kB
+##   Size: 18 kB
 ## 
 ## 
 ## &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://w...
@@ -275,50 +275,50 @@ content(res) %&gt;% html_nodes('#maincontent') </code></pre>
 <pre class="r"><code># harvest by css class: rtddt
 content(res) %&gt;% html_nodes('.rtddt') </code></pre>
 <pre><code>## {xml_nodeset (30)}
-##  [1] &lt;li class=&quot;rtddt enter&quot;&gt;\n                                    &lt;a hr ...
-##  [2] &lt;li class=&quot;rtddt local even hsv&quot;&gt;\n                                 ...
-##  [3] &lt;li class=&quot;rtddt life&quot;&gt;\n                                    &lt;a hre ...
-##  [4] &lt;li class=&quot;rtddt fashion even hsv&quot;&gt;\n                               ...
-##  [5] &lt;li class=&quot;rtddt sport&quot;&gt;\n                                    &lt;a hr ...
-##  [6] &lt;li class=&quot;rtddt inter even&quot;&gt;\n                                     ...
-##  [7] &lt;li class=&quot;rtddt sport hsv&quot;&gt;\n                                    &lt; ...
-##  [8] &lt;li class=&quot;rtddt local even hsv&quot;&gt;\n                                 ...
-##  [9] &lt;li class=&quot;rtddt local&quot;&gt;\n                                    &lt;a hr ...
-## [10] &lt;li class=&quot;rtddt sport even&quot;&gt;\n                                     ...
-## [11] &lt;li class=&quot;rtddt life&quot;&gt;\n                                    &lt;a hre ...
-## [12] &lt;li class=&quot;rtddt busi even&quot;&gt;\n                                    &lt; ...
-## [13] &lt;li class=&quot;rtddt life&quot;&gt;\n                                    &lt;a hre ...
-## [14] &lt;li class=&quot;rtddt sport even&quot;&gt;\n                                     ...
-## [15] &lt;li class=&quot;rtddt inter hsv&quot;&gt;\n                                    &lt; ...
-## [16] &lt;li class=&quot;rtddt busi even&quot;&gt;\n                                    &lt; ...
+##  [1] &lt;li class=&quot;rtddt life hsv&quot;&gt;\n                                    &lt;a ...
+##  [2] &lt;li class=&quot;rtddt busi even&quot;&gt;\n                                    &lt; ...
+##  [3] &lt;li class=&quot;rtddt life hsv&quot;&gt;\n                                    &lt;a ...
+##  [4] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
+##  [5] &lt;li class=&quot;rtddt life hsv&quot;&gt;\n                                    &lt;a ...
+##  [6] &lt;li class=&quot;rtddt life even hsv&quot;&gt;\n                                  ...
+##  [7] &lt;li class=&quot;rtddt local hsv&quot;&gt;\n                                    &lt; ...
+##  [8] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
+##  [9] &lt;li class=&quot;rtddt strange hsv&quot;&gt;\n                                    ...
+## [10] &lt;li class=&quot;rtddt polit even hsv&quot;&gt;\n                                 ...
+## [11] &lt;li class=&quot;rtddt enter hsv&quot;&gt;\n                                    &lt; ...
+## [12] &lt;li class=&quot;rtddt enter even&quot;&gt;\n                                     ...
+## [13] &lt;li class=&quot;rtddt local&quot;&gt;\n                                    &lt;a hr ...
+## [14] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
+## [15] &lt;li class=&quot;rtddt inter&quot;&gt;\n                                    &lt;a hr ...
+## [16] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
 ## [17] &lt;li class=&quot;rtddt local&quot;&gt;\n                                    &lt;a hr ...
-## [18] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
-## [19] &lt;li class=&quot;rtddt local&quot;&gt;\n                                    &lt;a hr ...
-## [20] &lt;li class=&quot;rtddt enter even&quot;&gt;\n                                     ...
+## [18] &lt;li class=&quot;rtddt polit even&quot;&gt;\n                                     ...
+## [19] &lt;li class=&quot;rtddt fashion&quot;&gt;\n                                    &lt;a  ...
+## [20] &lt;li class=&quot;rtddt polit even&quot;&gt;\n                                     ...
 ## ...</code></pre>
 <pre class="r"><code># harvest by list li with css class: rtddt
 content(res) %&gt;% html_nodes('li.rtddt') </code></pre>
 <pre><code>## {xml_nodeset (30)}
-##  [1] &lt;li class=&quot;rtddt enter&quot;&gt;\n                                    &lt;a hr ...
-##  [2] &lt;li class=&quot;rtddt local even hsv&quot;&gt;\n                                 ...
-##  [3] &lt;li class=&quot;rtddt life&quot;&gt;\n                                    &lt;a hre ...
-##  [4] &lt;li class=&quot;rtddt fashion even hsv&quot;&gt;\n                               ...
-##  [5] &lt;li class=&quot;rtddt sport&quot;&gt;\n                                    &lt;a hr ...
-##  [6] &lt;li class=&quot;rtddt inter even&quot;&gt;\n                                     ...
-##  [7] &lt;li class=&quot;rtddt sport hsv&quot;&gt;\n                                    &lt; ...
-##  [8] &lt;li class=&quot;rtddt local even hsv&quot;&gt;\n                                 ...
-##  [9] &lt;li class=&quot;rtddt local&quot;&gt;\n                                    &lt;a hr ...
-## [10] &lt;li class=&quot;rtddt sport even&quot;&gt;\n                                     ...
-## [11] &lt;li class=&quot;rtddt life&quot;&gt;\n                                    &lt;a hre ...
-## [12] &lt;li class=&quot;rtddt busi even&quot;&gt;\n                                    &lt; ...
-## [13] &lt;li class=&quot;rtddt life&quot;&gt;\n                                    &lt;a hre ...
-## [14] &lt;li class=&quot;rtddt sport even&quot;&gt;\n                                     ...
-## [15] &lt;li class=&quot;rtddt inter hsv&quot;&gt;\n                                    &lt; ...
-## [16] &lt;li class=&quot;rtddt busi even&quot;&gt;\n                                    &lt; ...
+##  [1] &lt;li class=&quot;rtddt life hsv&quot;&gt;\n                                    &lt;a ...
+##  [2] &lt;li class=&quot;rtddt busi even&quot;&gt;\n                                    &lt; ...
+##  [3] &lt;li class=&quot;rtddt life hsv&quot;&gt;\n                                    &lt;a ...
+##  [4] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
+##  [5] &lt;li class=&quot;rtddt life hsv&quot;&gt;\n                                    &lt;a ...
+##  [6] &lt;li class=&quot;rtddt life even hsv&quot;&gt;\n                                  ...
+##  [7] &lt;li class=&quot;rtddt local hsv&quot;&gt;\n                                    &lt; ...
+##  [8] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
+##  [9] &lt;li class=&quot;rtddt strange hsv&quot;&gt;\n                                    ...
+## [10] &lt;li class=&quot;rtddt polit even hsv&quot;&gt;\n                                 ...
+## [11] &lt;li class=&quot;rtddt enter hsv&quot;&gt;\n                                    &lt; ...
+## [12] &lt;li class=&quot;rtddt enter even&quot;&gt;\n                                     ...
+## [13] &lt;li class=&quot;rtddt local&quot;&gt;\n                                    &lt;a hr ...
+## [14] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
+## [15] &lt;li class=&quot;rtddt inter&quot;&gt;\n                                    &lt;a hr ...
+## [16] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
 ## [17] &lt;li class=&quot;rtddt local&quot;&gt;\n                                    &lt;a hr ...
-## [18] &lt;li class=&quot;rtddt local even&quot;&gt;\n                                     ...
-## [19] &lt;li class=&quot;rtddt local&quot;&gt;\n                                    &lt;a hr ...
-## [20] &lt;li class=&quot;rtddt enter even&quot;&gt;\n                                     ...
+## [18] &lt;li class=&quot;rtddt polit even&quot;&gt;\n                                     ...
+## [19] &lt;li class=&quot;rtddt fashion&quot;&gt;\n                                    &lt;a  ...
+## [20] &lt;li class=&quot;rtddt polit even&quot;&gt;\n                                     ...
 ## ...</code></pre>
 </div>
 <div id="comparing-httr-get-and-rvest-read_html" class="section level3">
@@ -340,38 +340,48 @@ read_html('http://www.appledaily.com.tw/realtimenews/section/new/')  %&gt;% html
 Sys.getlocale()</code></pre>
 <pre><code>## [1] &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;</code></pre>
 <pre class="r"><code>li &lt;- read_html(url, encoding = 'UTF-8') %&gt;% html_nodes('li.rtddt')
-li %&gt;% html_nodes('a')</code></pre>
-<pre><code>## {xml_nodeset (30)}
-##  [1] &lt;a href=&quot;/realtimenews/article/entertainment/20160409/834998/\xe3\u ...
-##  [2] &lt;a href=&quot;/realtimenews/article/local/20160409/834989/\xe3\u0080蔣\x ...
-##  [3] &lt;a href=&quot;/realtimenews/article/life/20160409/835032/\xe5憭扯\xa6\x8 ...
-##  [4] &lt;a href=&quot;/realtimenews/article/fashion/20160409/835008/\xe5摮\xa3\x ...
-##  [5] &lt;a href=&quot;/realtimenews/article/sports/20160409/835041/\xe5銝\x9c\u ...
-##  [6] &lt;a href=&quot;/realtimenews/article/international/20160409/835036/銝遛\xe ...
-##  [7] &lt;a href=&quot;/realtimenews/article/sports/20160409/835042/\xe9撗梢\xe6\ ...
-##  [8] &lt;a href=&quot;/realtimenews/article/local/20160409/834957/憯舀慰\xe6\x89撘 ...
-##  [9] &lt;a href=&quot;/realtimenews/article/local/20160409/835033/\xe7\x96\x84 ...
-## [10] &lt;a href=&quot;/realtimenews/article/sports/20160409/835035/\xe7\x8a\u008 ...
-## [11] &lt;a href=&quot;/realtimenews/article/life/20160409/835030/\xe3\u0080\x98 ...
-## [12] &lt;a href=&quot;/realtimenews/article/finance/20160409/834943/銝凋縑\xe5\x85 ...
-## [13] &lt;a href=&quot;/realtimenews/article/life/20160409/835027/憭抒慦賢蔑\xe5\x8c ...
-## [14] &lt;a href=&quot;/realtimenews/article/sports/20160409/835029/\xe6\x96\x8c ...
-## [15] &lt;a href=&quot;/realtimenews/article/international/20160409/835017/\xe5\ ...
-## [16] &lt;a href=&quot;/realtimenews/article/finance/20160409/835025/\xe5\x9c陸\x ...
-## [17] &lt;a href=&quot;/realtimenews/article/local/20160409/835023/\xe7\xa0戊11\x ...
-## [18] &lt;a href=&quot;/realtimenews/article/local/20160409/835022/撣\xae頩\x87 ...
-## [19] &lt;a href=&quot;/realtimenews/article/local/20160409/835016/霅血\xaf\xb8\x ...
-## [20] &lt;a href=&quot;/realtimenews/article/entertainment/20160409/835004/\xe3\u ...
-## ...</code></pre>
-<pre class="r"><code>datetime &lt;- li %&gt;% html_nodes('time') %&gt;% html_text() %&gt;%iconv(from='UTF-8', to='UTF-8')
+
+datetime &lt;- li %&gt;% html_nodes('time') %&gt;% html_text() %&gt;%iconv(from='UTF-8', to='UTF-8')
 h1 &lt;- li %&gt;% html_nodes('h1') %&gt;% html_text() %&gt;%iconv(from='UTF-8', to='UTF-8') 
 h2 &lt;- li %&gt;% html_nodes('h2') %&gt;% html_text() %&gt;%iconv(from='UTF-8', to='UTF-8')
 
-appledf &lt;- data.frame(datetime = datetime, title = h1, category = h2 )
+li %&gt;% html_nodes('a') %&gt;% html_attr('href')</code></pre>
+<pre><code>##  [1] &quot;/realtimenews/article/life/20160409/834924/【更新】惟覺和尚因併發症圓寂　4/23火化&quot;              
+##  [2] &quot;/realtimenews/article/finance/20160409/835097/台灣人瘋吃早午餐　原來都是這原因&quot;                 
+##  [3] &quot;/realtimenews/article/life/20160409/834984/【更新】林明溱致哀　讚惟覺打造台灣羅浮宮&quot;            
+##  [4] &quot;/realtimenews/article/local/20160409/835092/秦楊多次喝醉鬧事上版面　現實生活比戲劇精彩&quot;         
+##  [5] &quot;/realtimenews/article/life/20160409/834862/【更新】惟覺和尚圓寂　中台禪寺即起暫停開放&quot;          
+##  [6] &quot;/realtimenews/article/life/20160409/834972/【更新】看過來！　辣妹鋼管團為媽祖熱舞&quot;              
+##  [7] &quot;/realtimenews/article/local/20160409/835045/【影片】國中生1次抽3根菸　還po影片炫耀&quot;             
+##  [8] &quot;/realtimenews/article/local/20160409/835078/吳季剛甜蜜結婚　花蓮女同志希望也可以被祝福&quot;         
+##  [9] &quot;/realtimenews/article/strange/20160409/835057/讀《101個讓LP增長的方法》　實測旁人反應&quot;          
+## [10] &quot;/realtimenews/article/politics/20160409/835059/【更新】參加民進黨臨全會　林全：接閣揆將全力以赴&quot;
+## [11] &quot;/realtimenews/article/entertainment/20160409/834998/【更新】梁文音教堂婚催淚　給老公打200分&quot;    
+## [12] &quot;/realtimenews/article/entertainment/20160409/835021/不能只有我看到～鍾楚紅32年前激情床戲出土&quot;   
+## [13] &quot;/realtimenews/article/local/20160409/835079/南市黑白雙盜出沒　專偷廟宇財物&quot;                     
+## [14] &quot;/realtimenews/article/local/20160409/835080/天氣炎熱嬰孩反鎖車內　破窗救嬰&quot;                     
+## [15] &quot;/realtimenews/article/international/20160409/835076/肯德基炸雞薯條掉地　竟讓網友媒體悼念&quot;       
+## [16] &quot;/realtimenews/article/local/20160409/835086/醉秦楊酒駕4萬交保&quot;                                  
+## [17] &quot;/realtimenews/article/local/20160409/835081/剛出獄又鬧自殺　喊要當「割喉案第二」&quot;               
+## [18] &quot;/realtimenews/article/politics/20160409/835069/蔡英文：政務官向人民負責　不是向中常會負責&quot;      
+## [19] &quot;/realtimenews/article/fashion/20160409/835031/女星都愛「小黃」　管它撞不撞包&quot;                   
+## [20] &quot;/realtimenews/article/politics/20160409/835066/【央廣RTI】推特po警方行動照片西國記者判罰&quot;       
+## [21] &quot;/realtimenews/article/local/20160409/835083/北市1旅館　老翁臉部蓋毛巾離奇死亡&quot;                  
+## [22] &quot;/realtimenews/article/life/20160409/835075/鴻海工程師投資失利告詐欺　達人這麼說&quot;                
+## [23] &quot;/realtimenews/article/politics/20160409/835064/馬總統登彭佳嶼　拉蔡打李護釣魚島主權&quot;            
+## [24] &quot;/realtimenews/article/entertainment/20160409/835055/潘慧如哽咽落髮　女神look走鐘&quot;               
+## [25] &quot;/realtimenews/article/sports/20160409/835071/船梨精祭出彈指梨球對陽岱鋼　結果…&quot;                 
+## [26] &quot;/realtimenews/article/international/20160409/835047/冷血拍下男子刺殺女友全過程未制止　女不治&quot;   
+## [27] &quot;/realtimenews/article/local/20160409/835068/路基疑遭掏空破大洞　警拉封鎖線避意外&quot;               
+## [28] &quot;/realtimenews/article/international/20160409/835058/雪梨街頭槍案　1死1傷&quot;                       
+## [29] &quot;/realtimenews/article/local/20160409/835023/【更新】砍女11刀還套塑膠袋　兇嫌疑棄屍&quot;             
+## [30] &quot;/realtimenews/article/local/20160409/835061/老婦浮運河　警盼指認身分&quot;</code></pre>
+<pre class="r"><code>appledf &lt;- data.frame(datetime = datetime, title = h1, category = h2 )
 appledf[  appledf$category == '娛樂',   ]</code></pre>
-<pre><code>##    datetime                                       title category
-## 1     15:24    【更新】梁文音出嫁！給老公打200分(14464)     娛樂
-## 20    14:34 「玖壹壹」春風又傳愛娜娜　反嗆爆料者(15892)     娛樂</code></pre>
+<pre><code>##    datetime                                           title category
+## 11    16:25 【更新】梁文音教堂婚催淚　給老公打200...(59072)     娛樂
+## 12    16:25 不能只有我看到～鍾楚紅32年前激情床戲出...(1118)     娛樂
+## 24    16:07              潘慧如哽咽落髮　女神look走鐘(4336)     娛樂</code></pre>
 </div>
 <div id="data-frame-demo" class="section level3">
 <h3>Data Frame Demo</h3>
@@ -429,6 +439,388 @@ df</code></pre>
 <pre class="r"><code>summary(df$bmi)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##   19.81   21.33   22.84   22.14   23.30   23.77</code></pre>
+</div>
+<div id="paste-demo" class="section level3">
+<h3>paste demo</h3>
+<pre class="r"><code>a &lt;- 'hello'
+b &lt;- 'world'
+
+# paste with space
+paste(a,b)</code></pre>
+<pre><code>## [1] &quot;hello world&quot;</code></pre>
+<pre class="r"><code># paste without space
+paste0(a,b)</code></pre>
+<pre><code>## [1] &quot;helloworld&quot;</code></pre>
+<pre class="r"><code># using magrittr
+a %&gt;% paste(b)</code></pre>
+<pre><code>## [1] &quot;hello world&quot;</code></pre>
+<pre class="r"><code># using magrittr
+a %&gt;% paste(b, .)</code></pre>
+<pre><code>## [1] &quot;world hello&quot;</code></pre>
+</div>
+<div id="get-appledaily-list-2" class="section level3">
+<h3>Get appledaily list 2</h3>
+<pre class="r"><code>url &lt;- 'http://www.appledaily.com.tw/realtimenews/section/new/'
+
+li &lt;- read_html(url, encoding = 'UTF-8') %&gt;% html_nodes('li.rtddt')
+
+datetime &lt;- li %&gt;% html_nodes('time') %&gt;% html_text() %&gt;%iconv(from='UTF-8', to='UTF-8')
+h1 &lt;- li %&gt;% html_nodes('h1') %&gt;% html_text() %&gt;%iconv(from='UTF-8', to='UTF-8') 
+h2 &lt;- li %&gt;% html_nodes('h2') %&gt;% html_text() %&gt;%iconv(from='UTF-8', to='UTF-8')
+
+url &lt;- li %&gt;% html_nodes('a') %&gt;% html_attr('href')
+
+url &lt;- paste0('http://www.appledaily.com.tw',url)
+url </code></pre>
+<pre><code>##  [1] &quot;http://www.appledaily.com.tw/realtimenews/article/life/20160409/834924/【更新】惟覺和尚因併發症圓寂　4/23火化&quot;              
+##  [2] &quot;http://www.appledaily.com.tw/realtimenews/article/finance/20160409/835097/台灣人瘋吃早午餐　原來都是這原因&quot;                 
+##  [3] &quot;http://www.appledaily.com.tw/realtimenews/article/life/20160409/834984/【更新】林明溱致哀　讚惟覺打造台灣羅浮宮&quot;            
+##  [4] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835092/秦楊多次喝醉鬧事上版面　現實生活比戲劇精彩&quot;         
+##  [5] &quot;http://www.appledaily.com.tw/realtimenews/article/life/20160409/834862/【更新】惟覺和尚圓寂　中台禪寺即起暫停開放&quot;          
+##  [6] &quot;http://www.appledaily.com.tw/realtimenews/article/life/20160409/834972/【更新】看過來！　辣妹鋼管團為媽祖熱舞&quot;              
+##  [7] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835045/【影片】國中生1次抽3根菸　還po影片炫耀&quot;             
+##  [8] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835078/吳季剛甜蜜結婚　花蓮女同志希望也可以被祝福&quot;         
+##  [9] &quot;http://www.appledaily.com.tw/realtimenews/article/strange/20160409/835057/讀《101個讓LP增長的方法》　實測旁人反應&quot;          
+## [10] &quot;http://www.appledaily.com.tw/realtimenews/article/politics/20160409/835059/【更新】參加民進黨臨全會　林全：接閣揆將全力以赴&quot;
+## [11] &quot;http://www.appledaily.com.tw/realtimenews/article/entertainment/20160409/834998/【更新】梁文音教堂婚催淚　給老公打200分&quot;    
+## [12] &quot;http://www.appledaily.com.tw/realtimenews/article/entertainment/20160409/835021/不能只有我看到～鍾楚紅32年前激情床戲出土&quot;   
+## [13] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835079/南市黑白雙盜出沒　專偷廟宇財物&quot;                     
+## [14] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835080/天氣炎熱嬰孩反鎖車內　破窗救嬰&quot;                     
+## [15] &quot;http://www.appledaily.com.tw/realtimenews/article/international/20160409/835076/肯德基炸雞薯條掉地　竟讓網友媒體悼念&quot;       
+## [16] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835086/醉秦楊酒駕4萬交保&quot;                                  
+## [17] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835081/剛出獄又鬧自殺　喊要當「割喉案第二」&quot;               
+## [18] &quot;http://www.appledaily.com.tw/realtimenews/article/politics/20160409/835069/蔡英文：政務官向人民負責　不是向中常會負責&quot;      
+## [19] &quot;http://www.appledaily.com.tw/realtimenews/article/fashion/20160409/835031/女星都愛「小黃」　管它撞不撞包&quot;                   
+## [20] &quot;http://www.appledaily.com.tw/realtimenews/article/politics/20160409/835066/【央廣RTI】推特po警方行動照片西國記者判罰&quot;       
+## [21] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835083/北市1旅館　老翁臉部蓋毛巾離奇死亡&quot;                  
+## [22] &quot;http://www.appledaily.com.tw/realtimenews/article/life/20160409/835075/鴻海工程師投資失利告詐欺　達人這麼說&quot;                
+## [23] &quot;http://www.appledaily.com.tw/realtimenews/article/politics/20160409/835064/馬總統登彭佳嶼　拉蔡打李護釣魚島主權&quot;            
+## [24] &quot;http://www.appledaily.com.tw/realtimenews/article/entertainment/20160409/835055/潘慧如哽咽落髮　女神look走鐘&quot;               
+## [25] &quot;http://www.appledaily.com.tw/realtimenews/article/sports/20160409/835071/船梨精祭出彈指梨球對陽岱鋼　結果…&quot;                 
+## [26] &quot;http://www.appledaily.com.tw/realtimenews/article/international/20160409/835047/冷血拍下男子刺殺女友全過程未制止　女不治&quot;   
+## [27] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835068/路基疑遭掏空破大洞　警拉封鎖線避意外&quot;               
+## [28] &quot;http://www.appledaily.com.tw/realtimenews/article/international/20160409/835058/雪梨街頭槍案　1死1傷&quot;                       
+## [29] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835023/【更新】砍女11刀還套塑膠袋　兇嫌疑棄屍&quot;             
+## [30] &quot;http://www.appledaily.com.tw/realtimenews/article/local/20160409/835061/老婦浮運河　警盼指認身分&quot;</code></pre>
+<pre class="r"><code>appledf &lt;- data.frame(datetime = datetime, title = h1, category = h2, url = url  )
+appledf</code></pre>
+<pre><code>##    datetime                                              title category
+## 1     16:37     【更新】惟覺和尚因併發症圓寂　4/23火...(54826)     生活
+## 2     16:37                台灣人瘋吃早午餐　原來都是這原因(0)     財經
+## 3     16:36     【更新】林明溱致哀　讚惟覺打造台灣羅浮宮(6240)     生活
+## 4     16:36     秦楊多次喝醉鬧事上版面　現實生活比戲劇精...(0)     社會
+## 5     16:35 【更新】惟覺和尚圓寂　中台禪寺即起暫停開...(84698)     生活
+## 6     16:35      【更新】看過來！　辣妹鋼管團為媽祖熱舞(30846)     生活
+## 7     16:35         【影片】國中生1次抽3根菸　還po影片炫...(0)     社會
+## 8     16:33     吳季剛甜蜜結婚　花蓮女同志希望也可以被祝...(0)     社會
+## 9     16:30         讀《101個讓LP增長的方法》　實測旁人...(27)     搜奇
+## 10    16:30   【更新】參加民進黨臨全會　林全：接閣揆將...(482)     政治
+## 11    16:25    【更新】梁文音教堂婚催淚　給老公打200...(59072)     娛樂
+## 12    16:25    不能只有我看到～鍾楚紅32年前激情床戲出...(1118)     娛樂
+## 13    16:24                 南市黑白雙盜出沒　專偷廟宇財物(97)     社會
+## 14    16:23                天氣炎熱嬰孩反鎖車內　破窗救嬰(441)     社會
+## 15    16:21         肯德基炸雞薯條掉地　竟讓網友媒體悼念(1603)     國際
+## 16    16:21                           醉秦楊酒駕  4萬交保(445)     社會
+## 17    16:20          剛出獄又鬧自殺　喊要當「割喉案第二」(855)     社會
+## 18    16:19   蔡英文：政務官向人民負責　不是向中常會負...(452)     政治
+## 19    16:15                女星都愛「小黃」　管它撞不撞包(695)     時尚
+## 20    16:15         【央廣RTI】推特po警方行動照片 西國...(100)     政治
+## 21    16:15             北市1旅館　老翁臉部蓋毛巾離奇死亡(572)     社會
+## 22    16:14         鴻海工程師投資失利告詐欺　達人這麼說(2192)     生活
+## 23    16:12          馬總統登彭佳嶼　拉蔡打李護釣魚島主權(964)     政治
+## 24    16:07                 潘慧如哽咽落髮　女神look走鐘(4336)     娛樂
+## 25    16:06            船梨精祭出彈指梨球對陽岱鋼　結果…(1149)     體育
+## 26    16:04     冷血拍下男子刺殺女友全過程未制止　女不治(4743)     國際
+## 27    16:02          路基疑遭掏空破大洞　警拉封鎖線避意外(739)     社會
+## 28    16:01                          雪梨街頭槍案　1死1傷(414)     國際
+## 29    15:58       【更新】砍女11刀還套塑膠袋　兇嫌疑棄屍(9547)     社會
+## 30    15:55                      老婦浮運河　警盼指認身分(916)     社會
+##                                                                                                                            url
+## 1                http://www.appledaily.com.tw/realtimenews/article/life/20160409/834924/【更新】惟覺和尚因併發症圓寂　4/23火化
+## 2                   http://www.appledaily.com.tw/realtimenews/article/finance/20160409/835097/台灣人瘋吃早午餐　原來都是這原因
+## 3              http://www.appledaily.com.tw/realtimenews/article/life/20160409/834984/【更新】林明溱致哀　讚惟覺打造台灣羅浮宮
+## 4           http://www.appledaily.com.tw/realtimenews/article/local/20160409/835092/秦楊多次喝醉鬧事上版面　現實生活比戲劇精彩
+## 5            http://www.appledaily.com.tw/realtimenews/article/life/20160409/834862/【更新】惟覺和尚圓寂　中台禪寺即起暫停開放
+## 6                http://www.appledaily.com.tw/realtimenews/article/life/20160409/834972/【更新】看過來！　辣妹鋼管團為媽祖熱舞
+## 7               http://www.appledaily.com.tw/realtimenews/article/local/20160409/835045/【影片】國中生1次抽3根菸　還po影片炫耀
+## 8           http://www.appledaily.com.tw/realtimenews/article/local/20160409/835078/吳季剛甜蜜結婚　花蓮女同志希望也可以被祝福
+## 9            http://www.appledaily.com.tw/realtimenews/article/strange/20160409/835057/讀《101個讓LP增長的方法》　實測旁人反應
+## 10 http://www.appledaily.com.tw/realtimenews/article/politics/20160409/835059/【更新】參加民進黨臨全會　林全：接閣揆將全力以赴
+## 11     http://www.appledaily.com.tw/realtimenews/article/entertainment/20160409/834998/【更新】梁文音教堂婚催淚　給老公打200分
+## 12    http://www.appledaily.com.tw/realtimenews/article/entertainment/20160409/835021/不能只有我看到～鍾楚紅32年前激情床戲出土
+## 13                      http://www.appledaily.com.tw/realtimenews/article/local/20160409/835079/南市黑白雙盜出沒　專偷廟宇財物
+## 14                      http://www.appledaily.com.tw/realtimenews/article/local/20160409/835080/天氣炎熱嬰孩反鎖車內　破窗救嬰
+## 15        http://www.appledaily.com.tw/realtimenews/article/international/20160409/835076/肯德基炸雞薯條掉地　竟讓網友媒體悼念
+## 16                                   http://www.appledaily.com.tw/realtimenews/article/local/20160409/835086/醉秦楊酒駕4萬交保
+## 17                http://www.appledaily.com.tw/realtimenews/article/local/20160409/835081/剛出獄又鬧自殺　喊要當「割喉案第二」
+## 18       http://www.appledaily.com.tw/realtimenews/article/politics/20160409/835069/蔡英文：政務官向人民負責　不是向中常會負責
+## 19                    http://www.appledaily.com.tw/realtimenews/article/fashion/20160409/835031/女星都愛「小黃」　管它撞不撞包
+## 20        http://www.appledaily.com.tw/realtimenews/article/politics/20160409/835066/【央廣RTI】推特po警方行動照片西國記者判罰
+## 21                   http://www.appledaily.com.tw/realtimenews/article/local/20160409/835083/北市1旅館　老翁臉部蓋毛巾離奇死亡
+## 22                 http://www.appledaily.com.tw/realtimenews/article/life/20160409/835075/鴻海工程師投資失利告詐欺　達人這麼說
+## 23             http://www.appledaily.com.tw/realtimenews/article/politics/20160409/835064/馬總統登彭佳嶼　拉蔡打李護釣魚島主權
+## 24                http://www.appledaily.com.tw/realtimenews/article/entertainment/20160409/835055/潘慧如哽咽落髮　女神look走鐘
+## 25                  http://www.appledaily.com.tw/realtimenews/article/sports/20160409/835071/船梨精祭出彈指梨球對陽岱鋼　結果…
+## 26    http://www.appledaily.com.tw/realtimenews/article/international/20160409/835047/冷血拍下男子刺殺女友全過程未制止　女不治
+## 27                http://www.appledaily.com.tw/realtimenews/article/local/20160409/835068/路基疑遭掏空破大洞　警拉封鎖線避意外
+## 28                        http://www.appledaily.com.tw/realtimenews/article/international/20160409/835058/雪梨街頭槍案　1死1傷
+## 29              http://www.appledaily.com.tw/realtimenews/article/local/20160409/835023/【更新】砍女11刀還套塑膠袋　兇嫌疑棄屍
+## 30                            http://www.appledaily.com.tw/realtimenews/article/local/20160409/835061/老婦浮運河　警盼指認身分</code></pre>
+<pre class="r"><code>url &lt;- 'http://www.appledaily.com.tw/realtimenews/article/local/20160409/834957/壯漢打劫弱女子　竟還用「這個」亂噴'
+
+read_html(url) %&gt;% html_nodes('.trans') %&gt;% html_text() %&gt;%iconv(from='UTF-8', to='UTF-8')</code></pre>
+<pre><code>## [1] &quot;\n                                        （新增影片）新北市1名36歲黃姓男子，日前開車行經淡水小白宮附近時，發現2名女子坐在路邊聊天，體型壯碩的黃男竟拿防狼噴霧器攻擊後，趁亂搶走放在一旁的包包，沒想到防狼噴霧器似乎過期沒發生效用，女子大聲喊叫搶劫，黃男還嚇得開車落荒而逃，昨天被警方循線逮捕。&lt;U+00A0&gt;警方表示，黃男身高175、體重80公斤體型壯碩，去年剛假釋出獄，因為找不到工作竟又開始犯案偷車，4號晚間黃男就開著偷來的車在路上物色搶劫對象，在淡 水小白宮旁發現兩名女子在看夜景，隨即上前持防狼噴霧器攻擊，並搶走放在一旁的公事包，得手一支手機跟現金1300元。&lt;U+00A0&gt;黃男犯案後躲回台北市住處，並將贓車丟棄在淡水新市鎮內，事隔多天以為沒事了，昨天晚上竟還大喇喇地跟女友在逛夜市吃藥燉排骨，警方發現黃男後隨即上前表明身分，黃男嚇的坦承犯案，警方也在黃男住處搜出其他來路不明的包包及金融卡，將再擴大追查，訊後依搶奪、竊盜罪將黃男移送法辦。（突發中心張貴翔／新北報導）&lt;U+00A0&gt;發稿時間：12：18更新時間：15：13&lt;U+00A0&gt;看了這則新聞的人，也看了……&lt;U+00A0&gt;中校妻紅杏出牆　控老農贈「菜花」屏東陣頭喋血　主嫌落網羈押禁見囂張「韓國狼」　竟摸台鐵女服務員下體&lt;U+00A0&gt;&lt;U+00A0&gt;&lt;U+00A0&gt;\n                    黃男體型壯碩，竟用防狼噴霧器欺負弱女子。翻攝畫面黃男開著偷來的贓車被警方掌握行蹤。翻攝畫面事發地點位於淡水小白宮附近的涼亭。翻攝畫面警方在黃男家中找到當時搶來的公事包。翻攝畫面                    \n                    googletag.cmd.push(function() {googletag.display('teadstv');})\n                    googletag.cmd.push(function() {googletag.display('goldenhorse');})\n                    googletag.cmd.push(function() {googletag.display('textlink');})\n                    有話要說 投稿「即時論壇」\n                  &quot;</code></pre>
+</div>
+<div id="function-demo" class="section level3">
+<h3>function demo</h3>
+<pre class="r"><code>f &lt;- function(e, a = 5){
+  e + a
+}
+
+f(3)</code></pre>
+<pre><code>## [1] 8</code></pre>
+<pre class="r"><code>f(3,2)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>f &lt;- function(e, a = 5, b = 2){
+  e + a *b
+}
+f(3,2,2)</code></pre>
+<pre><code>## [1] 7</code></pre>
+<pre class="r"><code>f(a = 3, b = 2,e =2)</code></pre>
+<pre><code>## [1] 8</code></pre>
+</div>
+<div id="get-article-function" class="section level3">
+<h3>get article function</h3>
+<pre class="r"><code>getArticle &lt;- function(url){
+  read_html(url)%&gt;% 
+    html_nodes('.articulum.trans') %&gt;% 
+    html_text() %&gt;% 
+    iconv(from='UTF-8', to='UTF-8')
+}
+
+a &lt;- getArticle('http://www.appledaily.com.tw/realtimenews/article/local/20160409/834957/壯漢打劫弱女子　竟還用「這個」亂噴')
+a</code></pre>
+<pre><code>## [1] &quot;\n                                        （新增影片）新北市1名36歲黃姓男子，日前開車行經淡水小白宮附近時，發現2名女子坐在路邊聊天，體型壯碩的黃男竟拿防狼噴霧器攻擊後，趁亂搶走放在一旁的包包，沒想到防狼噴霧器似乎過期沒發生效用，女子大聲喊叫搶劫，黃男還嚇得開車落荒而逃，昨天被警方循線逮捕。&lt;U+00A0&gt;警方表示，黃男身高175、體重80公斤體型壯碩，去年剛假釋出獄，因為找不到工作竟又開始犯案偷車，4號晚間黃男就開著偷來的車在路上物色搶劫對象，在淡 水小白宮旁發現兩名女子在看夜景，隨即上前持防狼噴霧器攻擊，並搶走放在一旁的公事包，得手一支手機跟現金1300元。&lt;U+00A0&gt;黃男犯案後躲回台北市住處，並將贓車丟棄在淡水新市鎮內，事隔多天以為沒事了，昨天晚上竟還大喇喇地跟女友在逛夜市吃藥燉排骨，警方發現黃男後隨即上前表明身分，黃男嚇的坦承犯案，警方也在黃男住處搜出其他來路不明的包包及金融卡，將再擴大追查，訊後依搶奪、竊盜罪將黃男移送法辦。（突發中心張貴翔／新北報導）&lt;U+00A0&gt;發稿時間：12：18更新時間：15：13&lt;U+00A0&gt;看了這則新聞的人，也看了……&lt;U+00A0&gt;中校妻紅杏出牆　控老農贈「菜花」屏東陣頭喋血　主嫌落網羈押禁見囂張「韓國狼」　竟摸台鐵女服務員下體&lt;U+00A0&gt;&lt;U+00A0&gt;&lt;U+00A0&gt;\n                    黃男體型壯碩，竟用防狼噴霧器欺負弱女子。翻攝畫面黃男開著偷來的贓車被警方掌握行蹤。翻攝畫面事發地點位於淡水小白宮附近的涼亭。翻攝畫面警方在黃男家中找到當時搶來的公事包。翻攝畫面                    \n                    googletag.cmd.push(function() {googletag.display('teadstv');})\n                    googletag.cmd.push(function() {googletag.display('goldenhorse');})\n                    googletag.cmd.push(function() {googletag.display('textlink');})\n                    有話要說 投稿「即時論壇」\n                  &quot;</code></pre>
+</div>
+<div id="for-looping" class="section level3">
+<h3>for looping</h3>
+<pre class="r"><code>1:30</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+## [24] 24 25 26 27 28 29 30</code></pre>
+<pre class="r"><code>1:100</code></pre>
+<pre><code>##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+##  [18]  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34
+##  [35]  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51
+##  [52]  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68
+##  [69]  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85
+##  [86]  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100</code></pre>
+<pre class="r"><code>for(i in 1:100){
+  print(i)
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10
+## [1] 11
+## [1] 12
+## [1] 13
+## [1] 14
+## [1] 15
+## [1] 16
+## [1] 17
+## [1] 18
+## [1] 19
+## [1] 20
+## [1] 21
+## [1] 22
+## [1] 23
+## [1] 24
+## [1] 25
+## [1] 26
+## [1] 27
+## [1] 28
+## [1] 29
+## [1] 30
+## [1] 31
+## [1] 32
+## [1] 33
+## [1] 34
+## [1] 35
+## [1] 36
+## [1] 37
+## [1] 38
+## [1] 39
+## [1] 40
+## [1] 41
+## [1] 42
+## [1] 43
+## [1] 44
+## [1] 45
+## [1] 46
+## [1] 47
+## [1] 48
+## [1] 49
+## [1] 50
+## [1] 51
+## [1] 52
+## [1] 53
+## [1] 54
+## [1] 55
+## [1] 56
+## [1] 57
+## [1] 58
+## [1] 59
+## [1] 60
+## [1] 61
+## [1] 62
+## [1] 63
+## [1] 64
+## [1] 65
+## [1] 66
+## [1] 67
+## [1] 68
+## [1] 69
+## [1] 70
+## [1] 71
+## [1] 72
+## [1] 73
+## [1] 74
+## [1] 75
+## [1] 76
+## [1] 77
+## [1] 78
+## [1] 79
+## [1] 80
+## [1] 81
+## [1] 82
+## [1] 83
+## [1] 84
+## [1] 85
+## [1] 86
+## [1] 87
+## [1] 88
+## [1] 89
+## [1] 90
+## [1] 91
+## [1] 92
+## [1] 93
+## [1] 94
+## [1] 95
+## [1] 96
+## [1] 97
+## [1] 98
+## [1] 99
+## [1] 100</code></pre>
+<pre class="r"><code>for(i in 1:nrow(appledf)){
+  print(appledf[i,]$title)
+}</code></pre>
+<pre><code>## [1] 【更新】惟覺和尚因併發症圓寂　4/23火...(54826)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 台灣人瘋吃早午餐　原來都是這原因(0)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 【更新】林明溱致哀　讚惟覺打造台灣羅浮宮(6240)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 秦楊多次喝醉鬧事上版面　現實生活比戲劇精...(0)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 【更新】惟覺和尚圓寂　中台禪寺即起暫停開...(84698)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 【更新】看過來！　辣妹鋼管團為媽祖熱舞(30846)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 【影片】國中生1次抽3根菸　還po影片炫...(0)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 吳季剛甜蜜結婚　花蓮女同志希望也可以被祝...(0)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 讀《101個讓LP增長的方法》　實測旁人...(27)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 【更新】參加民進黨臨全會　林全：接閣揆將...(482)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 【更新】梁文音教堂婚催淚　給老公打200...(59072)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 不能只有我看到～鍾楚紅32年前激情床戲出...(1118)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 南市黑白雙盜出沒　專偷廟宇財物(97)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 天氣炎熱嬰孩反鎖車內　破窗救嬰(441)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 肯德基炸雞薯條掉地　竟讓網友媒體悼念(1603)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 醉秦楊酒駕  4萬交保(445)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 剛出獄又鬧自殺　喊要當「割喉案第二」(855)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 蔡英文：政務官向人民負責　不是向中常會負...(452)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 女星都愛「小黃」　管它撞不撞包(695)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 【央廣RTI】推特po警方行動照片 西國...(100)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 北市1旅館　老翁臉部蓋毛巾離奇死亡(572)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 鴻海工程師投資失利告詐欺　達人這麼說(2192)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 馬總統登彭佳嶼　拉蔡打李護釣魚島主權(964)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 潘慧如哽咽落髮　女神look走鐘(4336)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 船梨精祭出彈指梨球對陽岱鋼　結果…(1149)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 冷血拍下男子刺殺女友全過程未制止　女不治(4743)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 路基疑遭掏空破大洞　警拉封鎖線避意外(739)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 雪梨街頭槍案　1死1傷(414)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 【更新】砍女11刀還套塑膠袋　兇嫌疑棄屍(9547)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...
+## [1] 老婦浮運河　警盼指認身分(916)
+## 30 Levels: 【央廣RTI】推特po警方行動照片 西國...(100) ...</code></pre>
+<pre class="r"><code>appledf$content = NA
+for(i in 1:nrow(appledf)){
+  appledf[i,]$content &lt;- getArticle(as.character(appledf[i,]$url))
+}</code></pre>
+</div>
+<div id="vectorizing-programming" class="section level3">
+<h3>vectorizing programming</h3>
+<pre class="r"><code>a &lt;- c(1,2,3,4,5)
+a &gt; 3</code></pre>
+<pre><code>## [1] FALSE FALSE FALSE  TRUE  TRUE</code></pre>
+<pre class="r"><code>a[a&gt;3]</code></pre>
+<pre><code>## [1] 4 5</code></pre>
+<pre class="r"><code>a &lt;- list(a = c(1,2,3,4,5), b = 1:100, c = c(1,2))
+lapply(a, sum)</code></pre>
+<pre><code>## $a
+## [1] 15
+## 
+## $b
+## [1] 5050
+## 
+## $c
+## [1] 3</code></pre>
+<pre class="r"><code>sapply(a, sum)</code></pre>
+<pre><code>##    a    b    c 
+##   15 5050    3</code></pre>
+<pre class="r"><code>x = list(c(1,2,3,4), c(5,6,7,8))
+lapply(x, sum)</code></pre>
+<pre><code>## [[1]]
+## [1] 10
+## 
+## [[2]]
+## [1] 26</code></pre>
+<pre class="r"><code>sapply(x, sum)</code></pre>
+<pre><code>## [1] 10 26</code></pre>
+</div>
+<div id="sapply-get-article-detail" class="section level3">
+<h3>sapply get article detail</h3>
+<pre class="r"><code>appledf$content &lt;- NULL
+appledf$url &lt;- as.character(appledf$url)
+
+appledf$content &lt;- sapply(appledf$url, getArticle)</code></pre>
 </div>
 </div>
 </div>
