@@ -64,3 +64,36 @@ qoo
 ```
 
 
+### magrittr
+
+```{r}
+
+data(iris)
+?iris
+View(iris)
+a <- head(iris)
+b <- a[3,]
+c<-b['Sepal.Length']
+tail(c,1)
+
+tail(head(iris)[3,]['Sepal.Length'],1)
+
+
+
+#install.packages("magrittr")
+library(magrittr)
+iris %>% head() %>% .[3,] %>% .['Sepal.Length'] %>% tail(1)
+```
+
+### rvest
+```{r}
+library(httr)
+library(rvest)
+res <- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
+content(res) %>% html_nodes('time') %>% .[1]
+content(res) %>% html_nodes('h1.dddd time') 
+content(res) %>% html_nodes('#maincontent > div.thoracis > div.abdominis.rlby.clearmen > h1 > time') %>% html_text()
+
+```
+
+

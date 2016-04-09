@@ -121,10 +121,10 @@ $(document).ready(function () {
 res &lt;- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
 res</code></pre>
 <pre><code>## Response [http://www.appledaily.com.tw/realtimenews/section/new/]
-##   Date: 2016-04-09 04:32
+##   Date: 2016-04-09 06:10
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
-##   Size: 72 kB
+##   Size: 72.6 kB
 ## &lt;!DOCTYPE html&gt;
 ## &lt;!--[if lt IE 7 ]&gt; &lt;html lang=&quot;zh-TW&quot; class=&quot;ie6 ielt8&quot;&gt; &lt;![endif]--&gt;
 ## &lt;!--[if IE 7 ]&gt;    &lt;html lang=&quot;zh-TW&quot; class=&quot;ie7 ielt8&quot;&gt; &lt;![endif]--&gt;
@@ -152,7 +152,7 @@ payload &lt;- list(
 res&lt;-POST(url, body=payload, encode=&quot;form&quot;)
 res</code></pre>
 <pre><code>## Response [https://www.thsrc.com.tw/tw/TimeTable/SearchResult]
-##   Date: 2016-04-09 04:32
+##   Date: 2016-04-09 06:10
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
 ##   Size: 95.5 kB
@@ -214,10 +214,10 @@ p1</code></pre>
 qoo &lt;- GET('http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&amp;searchdate=2016/04/09&amp;fromstation=1810&amp;tostation=1008&amp;trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271108%27,%271110%27,%271120%27&amp;fromtime=0600&amp;totime=2359')
 qoo</code></pre>
 <pre><code>## Response [http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&amp;searchdate=2016/04/09&amp;fromstation=1810&amp;tostation=1008&amp;trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271108%27,%271110%27,%271120%27&amp;fromtime=0600&amp;totime=2359]
-##   Date: 2016-04-09 04:32
+##   Date: 2016-04-09 06:10
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
-##   Size: 18.4 kB
+##   Size: 18.2 kB
 ## 
 ## 
 ## &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://w...
@@ -229,6 +229,43 @@ qoo</code></pre>
 ##     &lt;script src=&quot;http://code.jquery.com/jquery-1.4.min.js&quot; type=&quot;text/ja...
 ## 
 ## ...</code></pre>
+</div>
+<div id="magrittr" class="section level3">
+<h3>magrittr</h3>
+<pre class="r"><code>data(iris)
+?iris</code></pre>
+<pre><code>## starting httpd help server ...</code></pre>
+<pre><code>##  done</code></pre>
+<pre class="r"><code>View(iris)
+a &lt;- head(iris)
+b &lt;- a[3,]
+c&lt;-b['Sepal.Length']
+tail(c,1)</code></pre>
+<pre><code>##   Sepal.Length
+## 3          4.7</code></pre>
+<pre class="r"><code>tail(head(iris)[3,]['Sepal.Length'],1)</code></pre>
+<pre><code>##   Sepal.Length
+## 3          4.7</code></pre>
+<pre class="r"><code>#install.packages(&quot;magrittr&quot;)
+library(magrittr)
+iris %&gt;% head() %&gt;% .[3,] %&gt;% .['Sepal.Length'] %&gt;% tail(1)</code></pre>
+<pre><code>##   Sepal.Length
+## 3          4.7</code></pre>
+</div>
+<div id="rvest" class="section level3">
+<h3>rvest</h3>
+<pre class="r"><code>library(httr)
+library(rvest)</code></pre>
+<pre><code>## Loading required package: xml2</code></pre>
+<pre class="r"><code>res &lt;- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
+content(res) %&gt;% html_nodes('time') %&gt;% .[1]</code></pre>
+<pre><code>## {xml_nodeset (1)}
+## [1] &lt;time&gt;2016 / 04 / 09&lt;/time&gt;</code></pre>
+<pre class="r"><code>content(res) %&gt;% html_nodes('h1.dddd time') </code></pre>
+<pre><code>## {xml_nodeset (1)}
+## [1] &lt;time&gt;2016 / 04 / 09&lt;/time&gt;</code></pre>
+<pre class="r"><code>content(res) %&gt;% html_nodes('#maincontent &gt; div.thoracis &gt; div.abdominis.rlby.clearmen &gt; h1 &gt; time') %&gt;% html_text()</code></pre>
+<pre><code>## [1] &quot;2016 / 04 / 09&quot;</code></pre>
 </div>
 </div>
 </div>
