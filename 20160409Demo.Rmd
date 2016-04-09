@@ -125,10 +125,12 @@ read_html('http://www.appledaily.com.tw/realtimenews/section/new/')  %>% html_no
 url <- 'http://www.appledaily.com.tw/realtimenews/section/new/'
 Sys.getlocale()
 li <- read_html(url, encoding = 'UTF-8') %>% html_nodes('li.rtddt')
-li %>% html_nodes('a')
+
 datetime <- li %>% html_nodes('time') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8')
 h1 <- li %>% html_nodes('h1') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8') 
 h2 <- li %>% html_nodes('h2') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8')
+
+li %>% html_nodes('a') %>% html_attr('href')
 
 appledf <- data.frame(datetime = datetime, title = h1, category = h2 )
 appledf[  appledf$category == '娛樂',   ]
@@ -172,4 +174,129 @@ max(df$bmi)
 summary(df$bmi)
 ```
 
+### paste demo
+```{r}
+a <- 'hello'
+b <- 'world'
+
+# paste with space
+paste(a,b)
+
+# paste without space
+paste0(a,b)
+
+# using magrittr
+a %>% paste(b)
+
+# using magrittr
+a %>% paste(b, .)
+```
+
+### Get appledaily list 2
+```{r}
+url <- 'http://www.appledaily.com.tw/realtimenews/section/new/'
+
+li <- read_html(url, encoding = 'UTF-8') %>% html_nodes('li.rtddt')
+
+datetime <- li %>% html_nodes('time') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8')
+h1 <- li %>% html_nodes('h1') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8') 
+h2 <- li %>% html_nodes('h2') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8')
+
+url <- li %>% html_nodes('a') %>% html_attr('href')
+
+url <- paste0('http://www.appledaily.com.tw',url)
+url 
+
+
+appledf <- data.frame(datetime = datetime, title = h1, category = h2, url = url  )
+appledf
+
+
+```
+
+
+```{r}
+url <- 'http://www.appledaily.com.tw/realtimenews/article/local/20160409/834957/壯漢打劫弱女子　竟還用「這個」亂噴'
+
+read_html(url) %>% html_nodes('.trans') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8')
+```
+
+### function demo
+```{r}
+f <- function(e, a = 5){
+  e + a
+}
+
+f(3)
+f(3,2)
+
+f <- function(e, a = 5, b = 2){
+  e + a *b
+}
+f(3,2,2)
+f(a = 3, b = 2,e =2)
+
+```
+
+### get article function
+```{r}
+getArticle <- function(url){
+  read_html(url)%>% 
+	html_nodes('.articulum.trans') %>% 
+	html_text() %>% 
+	iconv(from='UTF-8', to='UTF-8')
+}
+
+a <- getArticle('http://www.appledaily.com.tw/realtimenews/article/local/20160409/834957/壯漢打劫弱女子　竟還用「這個」亂噴')
+a
+```
+### for looping
+```{r}
+
+1:30
+1:100
+
+for(i in 1:100){
+  print(i)
+}
+
+
+for(i in 1:nrow(appledf)){
+  print(appledf[i,]$title)
+}
+
+appledf$content = NA
+for(i in 1:nrow(appledf)){
+  appledf[i,]$content <- getArticle(as.character(appledf[i,]$url))
+}
+
+```
+
+
+### vectorizing programming
+```{r}
+a <- c(1,2,3,4,5)
+a > 3
+a[a>3]
+
+a <- list(a = c(1,2,3,4,5), b = 1:100, c = c(1,2))
+lapply(a, sum)
+sapply(a, sum)
+
+x = list(c(1,2,3,4), c(5,6,7,8))
+lapply(x, sum)
+sapply(x, sum)
+
+
+
+```
+
+### sapply get article detail
+```{r}
+appledf$content <- NULL
+appledf$url <- as.character(appledf$url)
+
+appledf$content <- sapply(appledf$url, getArticle)
+
+```
 
