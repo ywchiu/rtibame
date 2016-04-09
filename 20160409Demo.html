@@ -121,7 +121,7 @@ $(document).ready(function () {
 res &lt;- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
 res</code></pre>
 <pre><code>## Response [http://www.appledaily.com.tw/realtimenews/section/new/]
-##   Date: 2016-04-09 03:53
+##   Date: 2016-04-09 04:01
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
 ##   Size: 75 kB
@@ -144,24 +144,50 @@ url &lt;- &quot;https://www.thsrc.com.tw/tw/TimeTable/SearchResult&quot;
 payload &lt;- list(
   StartStation='977abb69-413a-4ccf-a109-0272c24fd490',
   EndStation='fbd828d8-b1da-4b06-a3bd-680cdca4d2cd',
-  SearchDate='2016/04/04',
+  SearchDate='2016/04/09',
   SearchTime='15:00',
   SearchWay='DepartureInMandarin'
 )
 
 res&lt;-POST(url, body=payload, encode=&quot;form&quot;)
 res</code></pre>
-<pre><code>## Response [https://www.thsrc.com.tw/tw/ErrorHandler/ErrorProgram]
-##   Date: 2016-04-09 03:53
-##   Status: 411
-##   Content-Type: text/html; charset=us-ascii
-##   Size: 344 B
-## &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&quot;http://www.w3.org/TR/h...
-## &lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Length Required&lt;/TITLE&gt;
-## &lt;META HTTP-EQUIV=&quot;Content-Type&quot; Content=&quot;text/html; charset=us-ascii&quot;&gt;&lt;/...
-## &lt;BODY&gt;&lt;h2&gt;Length Required&lt;/h2&gt;
-## &lt;hr&gt;&lt;p&gt;HTTP Error 411. The request must be chunked or have a content len...
-## &lt;/BODY&gt;&lt;/HTML&gt;</code></pre>
+<pre><code>## Response [https://www.thsrc.com.tw/tw/TimeTable/SearchResult]
+##   Date: 2016-04-09 04:01
+##   Status: 200
+##   Content-Type: text/html; charset=utf-8
+##   Size: 95.5 kB
+## 
+## 
+## &lt;!DOCTYPE html&gt;
+## &lt;html lang=&quot;zh-tw&quot;&gt;
+## 
+## 
+## 
+## &lt;meta charset=&quot;utf-8&quot; /&gt;
+## &lt;link rel=&quot;shortcut icon&quot; href=&quot;/Content/favicon/favicon.ico&quot; /&gt;
+## &lt;!--&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0...
+## ...</code></pre>
+</div>
+<div id="markdown-sample" class="section level3">
+<h3>Markdown Sample</h3>
+</div>
+<div id="heading-1" class="section level1">
+<h1>heading 1</h1>
+<div id="heading-2" class="section level2">
+<h2>heading 2</h2>
+<div id="heading-3" class="section level3">
+<h3>heading 3</h3>
+<ul>
+<li>list item
+<ol style="list-style-type: decimal">
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+</ol></li>
+<li>list item2</li>
+</ul>
+</div>
+</div>
 </div>
 
 

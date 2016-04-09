@@ -4,6 +4,7 @@ author: "David Chiu"
 date: "2016年4月9日"
 output: html_document
 ---
+
 ### GET appledaily
 ```{r}
 library(httr)
@@ -19,7 +20,7 @@ url <- "https://www.thsrc.com.tw/tw/TimeTable/SearchResult"
 payload <- list(
   StartStation='977abb69-413a-4ccf-a109-0272c24fd490',
   EndStation='fbd828d8-b1da-4b06-a3bd-680cdca4d2cd',
-  SearchDate='2016/04/04',
+  SearchDate='2016/04/09',
   SearchTime='15:00',
   SearchWay='DepartureInMandarin'
 )
@@ -29,3 +30,15 @@ res
 
 ```
 
+
+### Markdown Sample
+
+# heading 1
+## heading 2
+### heading 3
+
+- list item
+    1. item1
+    2. item2
+    3. item3
+- list item2
