@@ -107,4 +107,69 @@ content(res) %>% html_nodes('.rtddt')
 content(res) %>% html_nodes('li.rtddt') 
 ```
 
+### Comparing httr GET and rvest read_html
+```{r}
+library(httr)
+library(rvest)
+res <- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
+
+# using httr GET
+content(res) %>% html_nodes('#maincontent > div.thoracis > div.abdominis.rlby.clearmen > h1 > time') %>% html_text()
+
+# using rvest read_html 
+read_html('http://www.appledaily.com.tw/realtimenews/section/new/')  %>% html_nodes('#maincontent > div.thoracis > div.abdominis.rlby.clearmen > h1 > time') %>% html_text()
+```
+
+### Get appledaily list
+```{r}
+url <- 'http://www.appledaily.com.tw/realtimenews/section/new/'
+Sys.getlocale()
+li <- read_html(url, encoding = 'UTF-8') %>% html_nodes('li.rtddt')
+li %>% html_nodes('a')
+datetime <- li %>% html_nodes('time') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8')
+h1 <- li %>% html_nodes('h1') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8') 
+h2 <- li %>% html_nodes('h2') %>% html_text() %>%iconv(from='UTF-8', to='UTF-8')
+
+appledf <- data.frame(datetime = datetime, title = h1, category = h2 )
+appledf[  appledf$category == '娛樂',   ]
+
+```
+
+### Data Frame Demo
+```{r}
+name <-'mike' 
+name
+
+name <- c('mike', 'alice', 'john')
+height <- c(170, 162, 180)
+weight <- c(66,52,77)
+
+df<- data.frame(namec = name, heightc = height, weightc = weight)
+
+df[1,]
+df[1, 'heightc']
+df[df$weightc >= 60, ]
+df
+View(df)
+
+# get second row 
+df[2,]
+
+# get column named after heightc
+df[,2]
+df$heightc
+
+#get alice's height
+df[2,'heightc']
+
+# get height over 170
+df[ df$heightc >=170  , c('namec', 'heightc')  ]
+
+# get bmi of these three, bmi = weight / (height^2)
+df$bmi = df$weightc / ((df$heightc / 100)^2)
+df
+max(df$bmi)
+summary(df$bmi)
+```
+
 
