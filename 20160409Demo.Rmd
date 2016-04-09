@@ -42,3 +42,25 @@ res
     2. item2
     3. item3
 - list item2
+
+### To understand Markdown
+- http://markdown.tw/
+
+### List Operation
+```{r}
+p1 <- list(height = 170, weight = 60, name ="annie" )
+p1
+p1$height
+
+```
+
+### GET Taiwan Railroad
+
+```{r}
+library(httr)
+qoo <- GET('http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&searchdate=2016/04/09&fromstation=1810&tostation=1008&trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271108%27,%271110%27,%271120%27&fromtime=0600&totime=2359')
+qoo
+
+```
+
+

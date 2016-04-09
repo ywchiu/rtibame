@@ -121,10 +121,10 @@ $(document).ready(function () {
 res &lt;- GET('http://www.appledaily.com.tw/realtimenews/section/new/')
 res</code></pre>
 <pre><code>## Response [http://www.appledaily.com.tw/realtimenews/section/new/]
-##   Date: 2016-04-09 04:01
+##   Date: 2016-04-09 04:32
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
-##   Size: 75 kB
+##   Size: 72 kB
 ## &lt;!DOCTYPE html&gt;
 ## &lt;!--[if lt IE 7 ]&gt; &lt;html lang=&quot;zh-TW&quot; class=&quot;ie6 ielt8&quot;&gt; &lt;![endif]--&gt;
 ## &lt;!--[if IE 7 ]&gt;    &lt;html lang=&quot;zh-TW&quot; class=&quot;ie7 ielt8&quot;&gt; &lt;![endif]--&gt;
@@ -152,7 +152,7 @@ payload &lt;- list(
 res&lt;-POST(url, body=payload, encode=&quot;form&quot;)
 res</code></pre>
 <pre><code>## Response [https://www.thsrc.com.tw/tw/TimeTable/SearchResult]
-##   Date: 2016-04-09 04:01
+##   Date: 2016-04-09 04:32
 ##   Status: 200
 ##   Content-Type: text/html; charset=utf-8
 ##   Size: 95.5 kB
@@ -186,6 +186,49 @@ res</code></pre>
 </ol></li>
 <li>list item2</li>
 </ul>
+</div>
+<div id="to-understand-markdown" class="section level3">
+<h3>To understand Markdown</h3>
+<ul>
+<li><a href="http://markdown.tw/" class="uri">http://markdown.tw/</a></li>
+</ul>
+</div>
+<div id="list-operation" class="section level3">
+<h3>List Operation</h3>
+<pre class="r"><code>p1 &lt;- list(height = 170, weight = 60, name =&quot;annie&quot; )
+p1</code></pre>
+<pre><code>## $height
+## [1] 170
+## 
+## $weight
+## [1] 60
+## 
+## $name
+## [1] &quot;annie&quot;</code></pre>
+<pre class="r"><code>p1$height</code></pre>
+<pre><code>## [1] 170</code></pre>
+</div>
+<div id="get-taiwan-railroad" class="section level3">
+<h3>GET Taiwan Railroad</h3>
+<pre class="r"><code>library(httr)
+qoo &lt;- GET('http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&amp;searchdate=2016/04/09&amp;fromstation=1810&amp;tostation=1008&amp;trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271108%27,%271110%27,%271120%27&amp;fromtime=0600&amp;totime=2359')
+qoo</code></pre>
+<pre><code>## Response [http://twtraffic.tra.gov.tw/twrail/SearchResult.aspx?searchtype=0&amp;searchdate=2016/04/09&amp;fromstation=1810&amp;tostation=1008&amp;trainclass=%271100%27,%271101%27,%271102%27,%271107%27,%271108%27,%271110%27,%271120%27&amp;fromtime=0600&amp;totime=2359]
+##   Date: 2016-04-09 04:32
+##   Status: 200
+##   Content-Type: text/html; charset=utf-8
+##   Size: 18.4 kB
+## 
+## 
+## &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://w...
+## &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+## &lt;head&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;...
+## 
+## &lt;/title&gt;&lt;link href=&quot;layout.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+## 
+##     &lt;script src=&quot;http://code.jquery.com/jquery-1.4.min.js&quot; type=&quot;text/ja...
+## 
+## ...</code></pre>
 </div>
 </div>
 </div>
