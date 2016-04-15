@@ -4,11 +4,18 @@
 ### Markdown 說明
 - http://markdown.tw/
 
-### 投影片 Lab1
+## Lab1
+
+### 投影片
 - https://www.slideshare.net/secret/14kUaiYMoPUUpz
 
-### 投影片 Lab2
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20160409
+
+## Lab2
+### 投影片
 - https://www.slideshare.net/secret/1yqlBhhPT8vioZ
 
-### 投影片 Lab3
+## Lab3
+### 投影片
 - https://www.slideshare.net/secret/31S1JQVYHl6Net
