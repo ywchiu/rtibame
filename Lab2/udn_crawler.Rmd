@@ -1,0 +1,37 @@
+---
+title: "udn_crawler"
+author: "David Chiu"
+date: "2016年4月15日"
+output: html_document
+---
+
+# UDN 新聞爬蟲
+
+## 抓取新聞列表
+```{r}
+library(rvest)
+domain <- 'http://udn.com'
+res <-  read_html('http://udn.com/news/breaknews/1')
+urls <-res %>% html_nodes('#breaknews_body a') %>% html_attr('href') %>% paste0(domain, x=.)
+
+```
+
+## 內容頁剖析器
+```{r}
+parseUDN = function(ele){
+  title = read_html(ele) %>% html_nodes('#story_art_title') %>% html_text() %>% iconv(from='UTF-8', to='UTF-8')
+  meta = read_html(ele) %>% html_nodes('#story_bady_info') %>% html_text() %>% iconv(from='UTF-8', to='UTF-8')
+  article = read_html(ele) %>% html_nodes('#story_body_content') %>% html_text() %>% iconv(from='UTF-8', to='UTF-8')
+  data.frame(title = title, meta=meta, article = article)
+}
+```
+## 抓取內容資訊
+```{r}
+udndf <- lapply(urls, parseUDN)
+```
+
+
+## 合併抓取新聞資料
+```{r}
+udn <- do.call("rbind", udndf)
+```

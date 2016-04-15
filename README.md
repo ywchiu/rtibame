@@ -16,6 +16,12 @@
 ### 投影片
 - https://www.slideshare.net/secret/1yqlBhhPT8vioZ
 
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20160415_01
+
+### UDN 爬蟲
+- http://rpubs.com/ywchiu/udn_crawler
+
 ## Lab3
 ### 投影片
 - https://www.slideshare.net/secret/31S1JQVYHl6Net
