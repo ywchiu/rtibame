@@ -206,6 +206,7 @@ dbWriteTable(conn, 'news_main', appledaily, append=TRUE,row.names=FALSE,overwrit
 CREATE TABLE `news_main` (
   `content` text,
   `title` varchar(1000) DEFAULT NULL,
+   `dt` datetime DEFAULT NULL,
   `category` varchar(100) DEFAULT NULL,
   `view_cnt` int(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
