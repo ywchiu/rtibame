@@ -143,3 +143,43 @@ a <- 'ABC@123@DEF'
 gsub('.*@.*@(.*)', '\\1', a)
 
 ```
+## x= .
+```{r}
+head(appledaily)
+appledaily %>% head()
+
+a = 'world'
+paste('hello', a)
+
+a %>% paste('hello')
+
+a %>% paste('hello', .)
+?gsub
+
+'人氣(123)' %>% gsub(pattern = '.{2}\\((\\d+)\\)', '\\1', x=.)
+```
+
+
+```
+f <- function(a, b=2, c=3){
+    a* b + c
+}
+
+f(1,2,3)
+f(5)
+f(3,2,1)
+f(b =3,c=2,1)
+```
+
+
+```
+#時間-字串轉換
+ds = '2016年04月05日22:47'
+x <- strptime(ds, "%Y年%m月%d日%H:%M")
+x
+
+#轉換Data Frame 內的時間
+appledaily$dt <- strptime(appledaily$dt, "%Y年%m月%d日%H:%M")
+
+appledaily[appledaily$dt >= '2016-04-15','dt']
+```
