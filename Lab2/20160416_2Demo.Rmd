@@ -1,0 +1,101 @@
+---
+title: "20160416_2"
+author: "David Chiu"
+date: "2016年4月15日"
+output: html_document
+---
+
+# 連結R 與MySQL
+
+## 完整的資料庫範例操作
+```
+library(RJDBC)
+jar.loc <- 'C:\\Program Files (x86)\\MySQL\\Connector.J 5.1\\mysql-connector-java-5.1.37-bin.jar'
+drv <- JDBC("com.mysql.jdbc.Driver",
+           jar.loc,
+           identifier.quote="`")
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+
+dbDisconnect(conn)
+
+```
+
+
+## 建立、表列、讀取表格資訊
+```
+dbWriteTable(conn, "iris", iris)
+dbListTables(conn)
+dbReadTable(conn,"iris")
+
+```
+
+## 使用Query 查詢數據
+```
+res <- dbGetQuery(conn, "SELECT * FROM iris")
+res
+
+```
+
+## 捨棄已存在表格
+```
+if(dbExistsTable(conn,'iris')){
+     dbRemoveTable(conn, 'iris')
+}
+dbListTables(conn)
+
+```
+
+## 插入整理完的蘋果新聞表格
+```
+dbWriteTable(conn, "appledaily", appledaily)
+dbListTables(conn)
+dbReadTable(conn,"appledaily")
+
+```
+
+
+## 建立新聞資料表
+```
+CREATE TABLE `news_main` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(1000) DEFAULT NULL,
+  `category` varchar(10) DEFAULT NULL,
+  `view_cnt` int(11) DEFAULT NULL,
+  `content` text,
+  `dt` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+```
+
+## 使用Append 新增資料
+```
+#寫入資料
+dbWriteTable(conn, 'news_main', appledaily, append=TRUE,row.names=FALSE,overwrite=FALSE)
+
+#讀取表格資料
+dbReadTable(conn, 'news_main')
+
+```
+
+
+## 使用SQL 作基本的資料分析
+```
+res <- dbGetQuery(conn, "SELECT category, count(*) FROM news_main group by category")
+res
+names(res) = c('category', 'cnt')
+pie(res$cnt,labels = res$category)
+
+```
+
+##　連結R 與SQLite
+```{R}
+#install.packages("RSQLite")
+library(RSQLite)
+con <- dbConnect(SQLite(), dbname = "appledaily") 
+
+dbWriteTable(con, "iris", iris,row.names=FALSE,append = TRUE, overwrite=FALSE)
+dbGetQuery(con, "SELECT * FROM iris limit 5")
+dbDisconnect(con)
+
+```
