@@ -183,3 +183,34 @@ appledaily$dt <- strptime(appledaily$dt, "%Y年%m月%d日%H:%M")
 
 appledaily[appledaily$dt >= '2016-04-15','dt']
 ```
+
+```
+library(RJDBC)
+jar.loc <- 'C:\\Program Files (x86)\\MySQL\\Connector.J 5.1\\mysql-connector-java-5.1.38-bin.jar'
+drv <- JDBC("com.mysql.jdbc.Driver",
+           jar.loc,
+           identifier.quote="`")
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+dbWriteTable(conn, "iris", iris)
+dbListTables(conn)
+dbReadTable(conn,"iris")
+
+res <- dbGetQuery(conn, "SELECT * FROM iris")
+class(res)
+if(dbExistsTable(conn,'iris')){
+     dbRemoveTable(conn, 'iris')
+}
+dbListTables(conn)
+dbWriteTable(conn, 'news_main', appledaily, append=TRUE,row.names=FALSE,overwrite=FALSE)
+
+CREATE TABLE `news_main` (
+  `content` text,
+  `title` varchar(1000) DEFAULT NULL,
+  `category` varchar(100) DEFAULT NULL,
+  `view_cnt` int(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+dbDisconnect(conn)
+
+
+```
