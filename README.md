@@ -32,6 +32,10 @@
 
 ## Lab3
 ### 投影片
+<<<<<<< HEAD
 - https://www.slideshare.net/secret/31S1JQVYHl6Net
 
 
+=======
+- https://www.slideshare.net/secret/adX8tUCy9US2rI 
+>>>>>>> e098c0c59109c0c92e5734d668bc448e078db910
