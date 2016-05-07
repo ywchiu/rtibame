@@ -41,3 +41,6 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/179050
+
+### 作業四
+- https://github.com/ywchiu/rtibame/raw/master/kcfor2016.RData
