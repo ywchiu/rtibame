@@ -44,3 +44,4 @@
 
 ### 作業四
 - https://github.com/ywchiu/rtibame/raw/master/kcfor2016.RData
+- https://github.com/ywchiu/rtibame/raw/master/kcfor2016.csv
