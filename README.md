@@ -37,6 +37,7 @@
 ## Lab4
 ### 投影片
 - https://www.slideshare.net/secret/qw3yGoGSUtuE9m 
+- https://www.slideshare.net/secret/3VCyer5FhHhrdW
 
 ### 程式碼
 - http://rpubs.com/ywchiu/179050
