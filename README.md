@@ -34,3 +34,14 @@
 ### 投影片
 - https://www.slideshare.net/secret/adX8tUCy9US2rI 
 
+## Lab4
+### 投影片
+- https://www.slideshare.net/secret/qw3yGoGSUtuE9m 
+- https://www.slideshare.net/secret/3VCyer5FhHhrdW
+
+### 程式碼
+- http://rpubs.com/ywchiu/179050
+
+### 作業四
+- https://github.com/ywchiu/rtibame/raw/master/kcfor2016.RData
+- https://github.com/ywchiu/rtibame/raw/master/kcfor2016.csv
