@@ -1,2 +1,2 @@
-load('/Users/jojotenya/Documents/ShinyApps/applenews/Data/applenews.RData')
+load('../data/applenews_win.RData')
 categories = unique(applenews$category)
