@@ -45,3 +45,14 @@
 ### 作業四
 - https://github.com/ywchiu/rtibame/raw/master/kcfor2016.RData
 - https://github.com/ywchiu/rtibame/raw/master/kcfor2016.csv
+
+
+## Lab5
+### 投影片
+- https://www.slideshare.net/secret/oL1e8p3SWMIQll
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20160513
+
+### 作業四答案
+
