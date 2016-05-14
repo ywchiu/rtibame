@@ -53,6 +53,7 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20160513
+- http://rpubs.com/ywchiu/Demo20160514_2
 
 ### 作業四答案
 - http://rpubs.com/ywchiu/homework4
