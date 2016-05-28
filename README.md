@@ -61,3 +61,6 @@
 ## Lab6
 ### 投影片
 - https://www.slideshare.net/secret/mI6aDF8h1JoMkM
+
+### 作業五答案
+- http://rpubs.com/ywchiu/homework5
