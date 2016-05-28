@@ -62,5 +62,8 @@
 ### 投影片
 - https://www.slideshare.net/secret/mI6aDF8h1JoMkM
 
+### 程式碼
+- http://rpubs.com/ywchiu/Tutorial20160528
+
 ### 作業五答案
 - http://rpubs.com/ywchiu/homework5
