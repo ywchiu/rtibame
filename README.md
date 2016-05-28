@@ -57,3 +57,7 @@
 
 ### 作業四答案
 - http://rpubs.com/ywchiu/homework4
+
+## Lab6
+### 投影片
+- https://www.slideshare.net/secret/mI6aDF8h1JoMkM
