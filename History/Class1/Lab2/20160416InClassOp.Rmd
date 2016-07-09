@@ -1,0 +1,217 @@
+---
+title: "20160416 In Class Operation"
+author: "David Chiu"
+date: "2016年4月16日"
+output: html_document
+---
+
+## DataFrame Operation
+```
+appledaily[1,]
+appledaily[2,]
+appledaily[1,'title']
+appledaily[1:3,'title']
+appledaily[1,'content']
+```
+
+## Strsplit
+```
+a <- 'aaa@bbb@ccc'
+strsplit(a,'@')
+strsplit(a,'@')[[1]][1]
+strsplit(a,'@')[[1]][2]
+strsplit(a,'@')[[1]][3]
+strsplit(a,'@')
+a %>% strsplit('@')
+a %>% strsplit('@') %>% .[[1]]
+a %>% strsplit('@') %>% .[[1]] %>% .[1]
+a %>% strsplit('@') %>% .[[1]] %>% .[2]
+a %>% strsplit('@') %>% .[[1]] %>% .[3]
+?strsplit
+strsplit('aaa@bbb@ccc', '@')
+strsplit(c('aaa@bbb@ccc', bbb@ccc), '@')
+strsplit(c('aaa@bbb@ccc', 'bbb@ccc'), '@')
+strsplit(c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq'), '@')
+strsplit(c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq'), '@')[[1]]
+strsplit(c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq'), '@')[[1]][1]
+strsplit(c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq'), '@')[[3]][2]
+paste(strsplit(c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq'), '@')[[3]][2], 'hello')
+paste(as.numeric(strsplit(c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq'), '@')[[3]][2]), 'hello')
+c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq')
+c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq') %>% strsplit('@')
+a <- c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq') %>% strsplit('@')
+a
+a[[3]]
+a[[3]][2]
+c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq')
+c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq') %>% strsplit('@')
+c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq') %>% strsplit('@') %>% .[[3]]
+c('aaa@bbb@ccc', 'bbb@ccc', 'dd@www@qqq') %>% strsplit('@') %>% .[[3]] %>%
+.[2]
+```
+
+## trimws
+```
+
+a <- '    Hi This is a sample  '
+
+trimws(a, 'left')
+trimws(a, 'le')
+trimws(a, 'l')
+trimws(a, 'lef')
+trimws(a, 'left')
+trimws(a, 'la')
+trimws(a, 'right')
+trimws(a, 'r')
+a %>% trimws()
+```
+### Paste
+```
+?paste
+paste('hello', 'world', 'haha', 'QQ')
+paste('hello', 'world', 'haha', 'QQ', sep="@")
+paste('hello', 'world', 'haha', 'QQ', s="@")
+paste('hello', 'world', 'haha', 'QQ', se="@")
+paste('hello', 'world', 'haha', 'QQ', sep="@")
+```
+
+## strsplit and collapse
+```
+a = 'this is a book'
+a
+strsplit(a, ' ')
+a %>% strsplit(' ') %>% .[[1]]
+a %>% strsplit(' ') %>% unlist()
+a %>% strsplit(' ') %>% unlist()
+a = c('this is a book', 'hello world')
+a %>% strsplit(' ') %>% unlist()
+a %>% strsplit(' ') %>% unlist()
+a %>% strsplit(' ') %>% .[[1]]
+a %>% strsplit(' ')
+a %>% strsplit(' ') %>% unlist()
+a %>% strsplit(' ') %>% unlist() %>% paste(collapse='@')
+```
+## DataFrame
+```
+data.frme(a = c('a', 'b', 'c'), b=c(1,2,3))
+df  =data.frame(a = c('a', 'b', 'c'), b=c(1,2,3))
+df
+df$a
+df$b
+df$c = 5
+df
+df$b * 3
+df$d =df$b * 3
+df
+f <- function(e){e* 3}
+sapply(df$b, f)
+df$e = sapply(df$b, f)
+df
+df$b = sapply(df$b, f)
+df
+df$e = NULL
+df
+```
+
+##gsub
+```
+gsub('Taiwan v.s. China : 99 v.s. 20',
+'(\\w+) v.s. \w+ : \\d+ v.s. \\d+', '\\1' )
+gsub('Taiwan v.s. China : 99 v.s. 20',
+'(\\w+) v.s. \w+ : \\d+ v.s. \\d+', '\\1' )
+gsub('Taiwan v.s. China : 99 v.s. 20',
+'(\\w+) v.s. \\w+ : \\d+ v.s. \\d+', '\\1' )
+gsub(x = 'Taiwan v.s. China : 99 v.s. 20',
+pattern ='(\\w+) v.s. \\w+ : \\d+ v.s. \\d+', '\\1' )
+gsub(x = 'Taiwan v.s. China : 99 v.s. 20',
+pattern ='(\\w+) v.s. (\\w+) : \\d+ v.s. \\d+',
+'\\2' )
+gsub(x = 'Taiwan v.s. China : 99 v.s. 20',
+pattern ='\\w+ v.s. (\\w+) : \\d+ v.s. \\d+',
+'\\1' )
+
+gsub(x= '人氣(123)', pattern = '.{2}\\((\\d+)\\)', '\\1')
+```
+
+## gsub2
+```
+a <- 'ABC@123@DEF'
+gsub('.*@(.*)@.*', '\\1', a)
+a <- 'ABC@123@DEF'
+gsub('.*@(.*@.*)', '\\1', a)
+a <- 'ABC@123@DEF'
+gsub('.*@.*@(.*)', '\\1', a)
+
+```
+## x= .
+```{r}
+head(appledaily)
+appledaily %>% head()
+
+a = 'world'
+paste('hello', a)
+
+a %>% paste('hello')
+
+a %>% paste('hello', .)
+?gsub
+
+'人氣(123)' %>% gsub(pattern = '.{2}\\((\\d+)\\)', '\\1', x=.)
+```
+
+
+```
+f <- function(a, b=2, c=3){
+    a* b + c
+}
+
+f(1,2,3)
+f(5)
+f(3,2,1)
+f(b =3,c=2,1)
+```
+
+
+```
+#時間-字串轉換
+ds = '2016年04月05日22:47'
+x <- strptime(ds, "%Y年%m月%d日%H:%M")
+x
+
+#轉換Data Frame 內的時間
+appledaily$dt <- strptime(appledaily$dt, "%Y年%m月%d日%H:%M")
+
+appledaily[appledaily$dt >= '2016-04-15','dt']
+```
+
+```
+library(RJDBC)
+jar.loc <- 'C:\\Program Files (x86)\\MySQL\\Connector.J 5.1\\mysql-connector-java-5.1.38-bin.jar'
+drv <- JDBC("com.mysql.jdbc.Driver",
+           jar.loc,
+           identifier.quote="`")
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+dbWriteTable(conn, "iris", iris)
+dbListTables(conn)
+dbReadTable(conn,"iris")
+
+res <- dbGetQuery(conn, "SELECT * FROM iris")
+class(res)
+if(dbExistsTable(conn,'iris')){
+     dbRemoveTable(conn, 'iris')
+}
+dbListTables(conn)
+dbWriteTable(conn, 'news_main', appledaily, append=TRUE,row.names=FALSE,overwrite=FALSE)
+
+CREATE TABLE `news_main` (
+  `content` text,
+  `title` varchar(1000) DEFAULT NULL,
+   `dt` datetime DEFAULT NULL,
+  `category` varchar(100) DEFAULT NULL,
+  `view_cnt` int(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+dbDisconnect(conn)
+
+
+```
