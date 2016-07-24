@@ -29,3 +29,7 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20160710
+
+## 作業1
+### 程式碼
+- http://rpubs.com/ywchiu/Homework1
