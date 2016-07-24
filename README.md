@@ -33,3 +33,8 @@
 ## 作業1
 ### 程式碼
 - http://rpubs.com/ywchiu/Homework1
+
+## Lab4
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20160724
