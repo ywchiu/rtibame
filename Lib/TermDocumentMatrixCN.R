@@ -1,7 +1,7 @@
 
 library(jiebaR)
 library(tm)
-DocumentTermMatrixCN = function(d.vec, control){
+DocumentTermMatrixCN = function(d.vec, wordlength = 2){
   mixseg = worker()
   
   jieba_tokenizer=function(d){
@@ -15,7 +15,7 @@ DocumentTermMatrixCN = function(d.vec, control){
   doc=unlist(tm_map(doc,jieba_tokenizer),recursive=F)
   doc=lapply(doc,function(d)paste(d,collapse=' '))
   
-  control.list=list(wordLengths=c(1,Inf),tokenize=space_tokenizer)
+  control.list=list(wordLengths=c(wordlength,Inf),tokenize=space_tokenizer)
   dtm=DocumentTermMatrix(Corpus(VectorSource(doc)),control=control)
   dtm
 }
