@@ -15,7 +15,7 @@ DocumentTermMatrixCN = function(d.vec, control){
   doc=unlist(tm_map(doc,jieba_tokenizer),recursive=F)
   doc=lapply(doc,function(d)paste(d,collapse=' '))
   
-  
-  dtm=DocumentTermMatrix(Corpus(VectorSource(doc)),control=control.list)
+  control.list=list(wordLengths=c(1,Inf),tokenize=space_tokenizer)
+  dtm=DocumentTermMatrix(Corpus(VectorSource(doc)),control=control)
   dtm
 }
