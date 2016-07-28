@@ -16,6 +16,6 @@ DocumentTermMatrixCN = function(d.vec, wordlength = 2){
   doc=lapply(doc,function(d)paste(d,collapse=' '))
   
   control.list=list(wordLengths=c(wordlength,Inf),tokenize=space_tokenizer)
-  dtm=DocumentTermMatrix(Corpus(VectorSource(doc)),control=control)
+  dtm=DocumentTermMatrix(Corpus(VectorSource(doc)),control=control.list)
   dtm
 }
