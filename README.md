@@ -38,3 +38,7 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20160724
+
+## 作業2
+### 程式碼
+http://rpubs.com/ywchiu/Homework2
