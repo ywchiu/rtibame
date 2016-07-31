@@ -47,3 +47,10 @@ http://rpubs.com/ywchiu/Homework2
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20160730
+
+## Lab6
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20160731
+
+
