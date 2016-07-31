@@ -53,4 +53,6 @@ http://rpubs.com/ywchiu/Homework2
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20160731
 
-
+### 補充資料
+- http://scikit-learn.org/stable/_static/ml_map.png
+- https://cdn-images-1.medium.com/max/800/1*LixatBxkewppAhv1Mm5H2w.jpeg
