@@ -18,50 +18,15 @@
 ## Lab1
 
 ### 投影片
-- https://www.slideshare.net/secret/14kUaiYMoPUUpz
+- https://www.slideshare.net/secret/bRoZEDBDNEws73
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20160709
 
 ## Lab2
 ### 投影片
-- https://www.slideshare.net/secret/1yqlBhhPT8vioZ
+- https://www.slideshare.net/secret/nvuMuYqSqi6brC
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20160710
 
-## 作業1
-### 程式碼
-- http://rpubs.com/ywchiu/Homework1
-
-## Lab4
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20160724
-
-## 作業2
-### 程式碼
-http://rpubs.com/ywchiu/Homework2
-
-## Lab5
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20160730
-
-## Lab6
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20160731
-
-## Lab7
-
-## 作業3
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20160814
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20160814_2
-
-### 補充資料
-- http://scikit-learn.org/stable/_static/ml_map.png
-- https://cdn-images-1.medium.com/max/800/1*LixatBxkewppAhv1Mm5H2w.jpeg
