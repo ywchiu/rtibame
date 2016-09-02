@@ -1,0 +1,42 @@
+---
+title: "ltn_news_crawler"
+author: "David Chiu"
+date: "2016年7月24日"
+output: html_document
+---
+
+## ltn_news_crawler
+
+```{r}
+library(rvest)
+library(stringr)
+res <- read_html('http://news.ltn.com.tw/list/BreakingNews')
+lipic <- res %>% html_nodes('li.lipic')
+title <- lipic %>% html_nodes('a.picword') %>% 
+    html_text() %>% iconv(from='UTF-8', to='UTF-8')
+link <- lipic %>% html_nodes('a.picword') %>% 
+    html_attr('href') 
+dt <- lipic %>% html_nodes('span') %>% 
+  html_text() 
+
+category <- lipic %>% html_nodes('span a') %>% 
+  html_attr('class') 
+
+
+map_table = read_html('http://news.ltn.com.tw/css/news/style.css?201509', encoding='UTF-8') %>%
+iconv(from='UTF-8', to='UTF-8') %>% 
+str_match_all(pattern='.list span a.(.*?):after\\{content:"(.*?)";.*\\}', string =.)  
+
+#map_table[[1]][,2]
+#map_table[[1]][,3]
+
+map_list = list()
+map_list[map_table[[1]][,2]] = map_table[[1]][,3]
+tag = map_list[category] %>% unlist()
+
+ltn_news  = data.frame(datetime = dt, 
+                       link = link, 
+                       title = title,
+                       category = tag)
+
+```

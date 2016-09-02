@@ -1,0 +1,300 @@
+---
+title: "20160724Demo"
+author: "David Chiu"
+date: "2016年7月24日"
+output: html_document
+---
+## 連結資料庫
+
+```{r}
+library(RJDBC)
+jar.loc <- 'C:\\Program Files (x86)\\MySQL\\Connector.J 5.1\\mysql-connector-java-5.1.38-bin.jar'
+drv <- JDBC("com.mysql.jdbc.Driver",
+           jar.loc,
+           identifier.quote="`")
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+
+dbDisconnect(conn)
+
+```
+## 寫入資料進Appledaily 的 iris_test
+```
+data(iris)
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+dbWriteTable(conn, "iris_test", iris)
+dbDisconnect(conn)
+```
+## SQL 範例
+```
+# 從iris_test 中挑選所有欄位
+SELECT * FROM appledaily.iris_test;
+# 從iris_test 中挑選sepal.length 以及 Species 欄位
+SELECT `Sepal.Length`, `Species` FROM appledaily.iris_test;
+# 從iris_test 中挑選sepal.length 以及 Species 欄位，並篩選Sepal.Length > 5 的資料
+SELECT `Sepal.Length`, `Species` FROM appledaily.iris_test 
+    WHERE `Sepal.Length` >=5;
+    
+# 根據花的種類進行分析    
+SELECT AVG(`Sepal.Length`), `Species` FROM appledaily.iris_test 
+    GROUP BY `Species`;
+```
+
+## 表列Appledaily 中的表格
+```
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+dbListTables(conn)
+dbDisconnect(conn)
+```
+
+## 讀取iris_test的資料
+```
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+df<-dbReadTable(conn,"iris_test")
+dbDisconnect(conn)
+```
+## 對MySQL 下Query 語句
+```
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+res <- dbGetQuery(conn, 'SELECT avg(`Sepal.Length`) as avg_length, Species FROM iris_test group by Species;')
+res
+dbDisconnect(conn)
+```
+
+## 刪除表格
+```
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+
+if(dbExistsTable(conn,'iris_test')){
+   dbRemoveTable(conn,'iris_test')
+}
+dbListTables(conn)
+dbDisconnect(conn)
+```
+
+## 下載檔案 & 將資料塞入 (錯誤版本)
+```
+download.file('https://github.com/ywchiu/rtibame/raw/master/data/applenews.RData', 'applenews.RData')
+load('applenews.RData')
+
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+
+dbWriteTable(conn, "applenews", applenews)
+dbListTables(conn)
+dbReadTable(conn,"applenews")
+dbDisconnect(conn)
+```
+
+
+## 下載檔案 & 將資料塞入 (正確版本)
+```
+CREATE TABLE `news_main` (
+  `content` text,
+  `title` varchar(1000) DEFAULT NULL,
+  `dt` datetime DEFAULT NULL,
+  `category` varchar(50) DEFAULT NULL,
+  `view_cnt` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+download.file('https://github.com/ywchiu/rtibame/raw/master/data/applenews.RData', 'applenews.RData')
+load('applenews.RData')
+
+applenews$view_cnt = as.integer(applenews$view_cnt)
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+
+dbWriteTable(conn, 'news_main', applenews, append=TRUE,row.names=FALSE,overwrite=FALSE)
+dbDisconnect(conn)
+```
+
+## 轉型
+``` 
+s = c("1", "2", "3")
+class(s)
+
+# to integer
+n = as.integer(s)
+class(n)
+
+# to character
+s2 = as.character(n)
+class(s2)
+
+# to factor
+c1 = as.factor(s2)
+class(c1)
+```
+
+## 做成圖表
+```
+
+conn <- dbConnect(drv, "jdbc:mysql://localhost/appledaily", "root", "test")
+res <- dbGetQuery(conn, "SELECT category, count(*) FROM news_main group by category")
+res
+str(res)
+names(res) = c('category', 'cnt')
+pie(res$cnt,labels = res$category)
+dbDisconnect(conn)
+```
+
+## 過濾資料
+```
+download.file('https://github.com/ywchiu/rtibame/raw/master/data/applenews.RData', 'applenews.RData')
+load('applenews.RData')
+
+
+applenews$view_cnt = as.integer(applenews$view_cnt)
+applenews[applenews$category == "娛樂",]
+load('applenews.RData')
+
+library(dplyr)
+filter(applenews, category == "娛樂")
+
+```
+
+## 可以使用 AND, OR 與 IN 來過濾資料 
+```
+#找出娛樂以及點閱數超過1000的新聞
+filter(applenews, category == "娛樂" & view_cnt > 1000)
+
+#找出娛樂或點閱數超過1000的新聞
+filter(applenews, category == "娛樂" | view_cnt > 1000)
+
+#找出娛樂與社會新聞
+filter(applenews, category %in% c("娛樂", "社會"))
+
+
+```
+
+## 選擇欄位
+```
+#原先R 提供的欄位選取
+applenews[, c("category","view_cnt")]
+
+#dplyr 的欄位選取
+select(applenews,category,view_cnt)
+
+```
+
+## 選擇欄位又過濾資料
+
+```
+applenews %>% 
+    select(category,view_cnt) %>% 
+	filter(category == "社會")
+```
+
+
+## 資料做排序
+```
+a = applenews[applenews$category == '社會' , c('category', 'view_cnt')]
+a[order(a$view_cnt),]
+
+applenews %>% 
+  select(category,view_cnt) %>% 
+	filter(category == "社會") %>%
+	arrange(view_cnt)
+
+```
+
+## 抽取時間
+```
+a = head(applenews[,'dt'])
+as.numeric(format(a, "%H"))
+
+
+table(format(applenews[,'dt'], '%d'))
+
+hournews <- 
+applenews %>% 
+select(dt) %>%
+filter(format(dt, '%d')  == '14') %>%
+mutate(hour= format(dt, '%H')) %>% 
+select(hour) %>%
+table()
+
+barplot(hournews)
+plot(hournews, type='l')
+
+applenews %>% 
+select(dt, title) %>%
+filter(format(dt, '%H')  == '09' & format(dt, '%d')  == '14')
+
+```
+
+
+## mutate
+```
+#計算總和
+freqsum = applenews %>%
+     select(view_cnt) %>%
+     sum()
+#使用mutate 新增欄位
+applenews %>%
+    select(title, category,view_cnt) %>%
+    mutate(portion= view_cnt/freqsum)
+#儲存新欄位
+applenews = applenews %>% mutate(portion= view_cnt/freqsum)
+
+```
+
+## 分組計算 (group_by, summarise)
+```
+applenews %>%
+    group_by(category) %>%
+    summarise(view_sum = sum(view_cnt, na.rm=TRUE)) %>% arrange(view_sum)
+    
+applenews %>%
+    group_by(category) %>%
+    summarise(view_mean = mean(view_cnt, na.rm=TRUE)) %>% arrange(view_mean)
+
+```
+
+
+## 統計多個欄位
+```
+applenews %>%
+    group_by(category) %>%
+    summarise_each(funs(sum), view_cnt, portion)
+```
+
+## 針對多個欄位做統計
+```
+applenews %>%
+   group_by(category) %>%
+   summarise_each(funs(min(., na.rm=TRUE), max(., na.rm=TRUE), sum(., na.rm=TRUE), mean(., na.rm=TRUE)), matches("view_cnt"))
+```
+
+## 資料計數
+```
+ applenews %>%
+     select(category) %>%
+     summarise_each(funs(n()))
+
+ applenews %>%
+     select(category) %>%
+     summarise_each(funs(n_distinct(category)))
+```
+
+## 使用直方圖顯示新聞點閱總和
+```
+#取得統計數
+cat_stat = applenews %>%
+    group_by(category) %>%
+    summarise(view_sum = sum(view_cnt)) %>%
+    arrange(desc(view_sum))
+cat_stat$category = as.factor(cat_stat$category)
+#繪圖
+barplot(cat_stat$view_sum, names.arg=cat_stat$category, col=cat_stat$category)
+
+```
+
+## 使用圓餅圖顯示新聞點閱比例 
+```
+pie(cat_stat$view_sum, label = cat_stat$category)
+```
+
+a = list('x,y', 'x,z', 'x,y', 'y,z', 'x,x,x')
+
+col = lapply(a, function(e)strsplit(e, split=',')) %>% unlist() %>% unique()
+
+b = sapply(a, function(e)strsplit(e, split=',')) 
+
