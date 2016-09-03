@@ -21,12 +21,10 @@
 - https://www.slideshare.net/secret/bRoZEDBDNEws73
 
 ### 程式碼
-- http://rpubs.com/ywchiu/Demo20160709
+- http://rpubs.com/ywchiu/Tutorial20160903
 
 ## Lab2
 ### 投影片
 - https://www.slideshare.net/secret/nvuMuYqSqi6brC
 
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20160710
 
