@@ -27,4 +27,8 @@
 ### 投影片
 - https://www.slideshare.net/secret/nvuMuYqSqi6brC
 
+## Lab3
+### 投影片
+- https://www.slideshare.net/secret/Iw4sfydKDjhRPE
+
 
