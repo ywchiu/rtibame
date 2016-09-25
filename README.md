@@ -27,8 +27,9 @@
 ### 投影片
 - https://www.slideshare.net/secret/nvuMuYqSqi6brC
 
+### 程式碼
+- http://rpubs.com/ywchiu/206302
+
 ## Lab3
 ### 投影片
 - https://www.slideshare.net/secret/Iw4sfydKDjhRPE
-
-
