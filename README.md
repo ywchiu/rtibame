@@ -36,3 +36,6 @@
 ## Lab3
 ### 投影片
 - https://www.slideshare.net/secret/Iw4sfydKDjhRPE
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20160925
