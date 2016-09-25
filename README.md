@@ -30,6 +30,9 @@
 ### 程式碼
 - http://rpubs.com/ywchiu/206302
 
+## 作業一解答
+- http://rpubs.com/ywchiu/Class3_Homework1
+
 ## Lab3
 ### 投影片
 - https://www.slideshare.net/secret/Iw4sfydKDjhRPE
