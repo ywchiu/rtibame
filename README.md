@@ -41,6 +41,6 @@
 - http://rpubs.com/ywchiu/Demo20160925
 
 ### 作業資料連結
-- https://goo.gl/hmfU44
-- 
-- 
+- Windows 使用者請下載 https://goo.gl/dzLfIl
+- Mac 使用者請下載 https://goo.gl/LA1j2L
+- Mac 使用者請下載(2) https://goo.gl/hmfU44
