@@ -44,3 +44,8 @@
 - Windows 使用者請下載 https://goo.gl/dzLfIl
 - Mac 使用者請下載 https://goo.gl/LA1j2L
 - Mac 使用者請下載(2) https://goo.gl/hmfU44
+
+
+## Lab4 
+### 投影片
+- https://www.slideshare.net/secret/auzOiUu6mah9QD
