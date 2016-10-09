@@ -57,3 +57,6 @@
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20161009
 
+### 股票資訊
+- https://github.com/ywchiu/pyfintech/raw/master/data/stock.xlsx
+
