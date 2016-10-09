@@ -52,3 +52,8 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20161008
+
+## Lab5
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20161009
+
