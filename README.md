@@ -64,4 +64,7 @@
 ### 作業二
 - http://rpubs.com/ywchiu/Homework20161022
 
+### Tableau Public
+- https://public.tableau.com/s/
+- https://github.com/ywchiu/pyfintech2/blob/master/lvr_with_location.xlsx
 
