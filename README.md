@@ -60,3 +60,8 @@
 ### 股票資訊
 - https://github.com/ywchiu/pyfintech/raw/master/data/stock.xlsx
 
+## Lab6
+### 作業二
+- http://rpubs.com/ywchiu/Homework20161022
+
+
