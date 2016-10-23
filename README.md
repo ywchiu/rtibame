@@ -74,3 +74,6 @@
 ## Lab7
 ### 作業三
 - http://rpubs.com/ywchiu/Homework20161023
+
+### 程式碼
+- http://rpubs.com/ywchiu/DEMO20161023
