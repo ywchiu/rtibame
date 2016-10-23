@@ -77,3 +77,6 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/DEMO20161023
+
+### 降低維度
+- https://www.slideshare.net/secret/sRoPd8jvNMA4vh
