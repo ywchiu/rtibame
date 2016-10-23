@@ -70,3 +70,7 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20161022
+
+## Lab7
+### 作業三
+- http://rpubs.com/ywchiu/Homework20161023
