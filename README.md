@@ -15,10 +15,11 @@
 - http://www.w3schools.com/html/
 - http://pydoing.blogspot.tw/2012/10/html-css-tutorial.html
 
-## Lab1
+## Lab0
 
 ### 投影片
 - https://www.slideshare.net/secret/bRoZEDBDNEws73
 
 ### 程式碼
+- http://rpubs.com/ywchiu/Demo20161112
 - http://rpubs.com/ywchiu/Tutorial20160903
