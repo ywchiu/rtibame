@@ -25,6 +25,5 @@
 - http://rpubs.com/ywchiu/Tutorial20160903
 
 ### 作業資料連結
-- Windows 使用者請下載 https://goo.gl/dzLfIl
-- Mac 使用者請下載 https://goo.gl/LA1j2L
+- 使用者請下載 https://goo.gl/LA1j2L
 - Mac 使用者請下載(2) https://goo.gl/hmfU44
