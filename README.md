@@ -27,3 +27,14 @@
 ### 作業資料連結
 - 使用者請下載 https://goo.gl/LA1j2L
 - Mac 使用者請下載(2) https://goo.gl/hmfU44
+
+## Lab1
+
+### 投影片
+- https://www.slideshare.net/secret/ny07zuIvIhcm2W
+
+### 程式碼
+
+### 作業二
+- https://www.slideshare.net/secret/heLgnE6e9nBqMw
+
