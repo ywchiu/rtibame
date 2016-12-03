@@ -49,3 +49,17 @@
 
 ### 作業三
 - https://www.slideshare.net/secret/HIv7rUrPQWTBMF
+
+## Lab3
+
+### 投影片
+- https://www.slideshare.net/secret/GbvsiL7WIF5AMQ
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20161203
+
+### 作業四
+- https://www.slideshare.net/secret/dM216HMMA1BtLF
+
+### Tableau Public
+- https://public.tableau.com/s/
