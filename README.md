@@ -63,3 +63,15 @@
 
 ### Tableau Public
 - https://public.tableau.com/s/
+
+
+## Lab3
+
+### 投影片
+- https://www.slideshare.net/secret/mDjdPt2C08U2Nc
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20161210
+
+### 作業五
+- 
