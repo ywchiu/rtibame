@@ -75,3 +75,12 @@
 
 ### 作業五
 - https://www.slideshare.net/secret/p1Tq0yxpjTJDgJ
+
+## Lab5
+
+### 投影片
+- https://www.slideshare.net/secret/q2YzeFPtxgQeqK
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20161217
+
