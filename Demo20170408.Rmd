@@ -1,0 +1,27 @@
+---
+title: "Demo20170408"
+author: "David Chiu"
+date: "2017年4月8日"
+output: html_document
+---
+
+
+## Homework2
+```{r}
+library(httr)
+#GET('http://news.ltn.com.tw/list/BreakingNews')
+
+
+library(rvest)
+ltn <- read_html('http://news.ltn.com.tw/list/BreakingNews') %>% html_nodes('.lipic')
+#as.character(ltn[1])
+
+title <- ltn %>% html_nodes('a.picword') %>% html_text()
+url   <- ltn %>% html_nodes('a.picword') %>% html_attr('href')
+datetime <- ltn %>% html_nodes('span') %>% html_text()
+
+ltn_news <- data.frame(title = title, url = url, datetime = datetime)
+View(ltn_news)
+
+```
+
