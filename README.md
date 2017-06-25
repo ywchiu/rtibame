@@ -31,3 +31,10 @@
 - 使用者請下載 https://goo.gl/LA1j2L
 - Mac 使用者請下載(2) https://goo.gl/hmfU44
 
+### 作業一 
+- 請先從Google Drive下載不動產實價登錄網的資料:
+- 請用R整理、轉換以下實價登錄資訊：
+- 將資料讀進一名為lvr_data的Data Frame
+- 計算大安區所有成交物件的的總價(total_price)總合以及平均
+- 列舉中山區所有成交物件總價(total_price)前三名的地址(address)以及(total_price)，並將結果存放至一名為zhongshan的DataFrame結構中
+
