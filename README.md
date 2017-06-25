@@ -18,73 +18,16 @@
 ### InfoLite
 - https://chrome.google.com/webstore/detail/infolite/ipjbadabbpedegielkhgpiekdlmfpgal
 
-
-
-## Lab0
-
 ### 投影片
 - https://www.slideshare.net/secret/bRoZEDBDNEws73
 
+
+## Lab1
+
 ### 程式碼
-- http://rpubs.com/ywchiu/Demo20170325
+- http://rpubs.com/ywchiu/Demo20170625
 
 ### 作業資料連結
 - 使用者請下載 https://goo.gl/LA1j2L
 - Mac 使用者請下載(2) https://goo.gl/hmfU44
-
-## Lab1
-
-### 投影片
-- https://www.slideshare.net/secret/ny07zuIvIhcm2W
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20170401
-
-### 作業二
-- https://www.slideshare.net/secret/heLgnE6e9nBqMw
-
-## Lab2
-
-### 投影片
-- https://www.slideshare.net/secret/MHQsH0UHKhxHgI
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20170408
-
-### 作業三
-- https://www.slideshare.net/secret/HIv7rUrPQWTBMF
-
-## Lab3
-
-### 投影片
-- https://www.slideshare.net/secret/GbvsiL7WIF5AMQ
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20170415
-
-### 作業四
-- https://www.slideshare.net/secret/dM216HMMA1BtLF
-
-### Tableau Public
-- https://public.tableau.com/s/
-
-
-## Lab4
-
-### 投影片
-- https://www.slideshare.net/secret/mDjdPt2C08U2Nc
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20170422
-
-### 作業五
-- https://www.slideshare.net/secret/p1Tq0yxpjTJDgJ
-
-## Lab5
-
-### 投影片
-- https://www.slideshare.net/secret/q2YzeFPtxgQeqK
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20170429
 
