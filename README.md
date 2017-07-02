@@ -38,3 +38,9 @@
 - 計算大安區所有成交物件的的總價(total_price)總合以及平均
 - 列舉中山區所有成交物件總價(total_price)前三名的地址(address)以及(total_price)，並將結果存放至一名為zhongshan的DataFrame結構中
 
+
+## Lab2
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20170702
+
