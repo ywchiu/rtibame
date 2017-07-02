@@ -44,3 +44,5 @@
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20170702
 
+### 作業二
+- https://www.slideshare.net/secret/heLgnE6e9nBqMw
