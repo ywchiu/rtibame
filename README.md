@@ -46,3 +46,11 @@
 
 ### 作業二
 - https://www.slideshare.net/secret/heLgnE6e9nBqMw
+
+## Lab3
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20170709
+
+### 作業二
+- https://www.slideshare.net/secret/heLgnE6e9nBqMw
