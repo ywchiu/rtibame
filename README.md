@@ -54,3 +54,8 @@
 
 ### 作業三
 - https://www.slideshare.net/secret/HIv7rUrPQWTBMF
+
+## Lab4
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20170722
