@@ -71,3 +71,6 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20170729
+
+### MNIST Example in R
+- https://gist.github.com/primaryobjects/b0c8333834debbc15be4
