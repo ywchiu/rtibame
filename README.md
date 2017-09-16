@@ -25,7 +25,7 @@
 ## Lab1
 
 ### 程式碼
-- http://rpubs.com/ywchiu/Demo20170625
+- http://rpubs.com/ywchiu/Demo20170916
 
 ### 作業資料連結
 - 使用者請下載 https://goo.gl/LA1j2L
