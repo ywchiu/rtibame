@@ -50,7 +50,7 @@
 ## Lab3
 
 ### 程式碼
-- http://rpubs.com/ywchiu/Demo20170709
+- http://rpubs.com/ywchiu/Demo20171001
 
 ### 作業三
 - https://www.slideshare.net/secret/HIv7rUrPQWTBMF
