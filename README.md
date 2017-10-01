@@ -52,6 +52,9 @@
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20171001
 
+### Visual Studio 2013 Redistributed
+- http://download.microsoft.com/download/9/0/5/905dbd86-d1b8-4d4b-8a50-cb0e922017b9/vcredist_x64.exe
+
 ### 作業三
 - https://www.slideshare.net/secret/HIv7rUrPQWTBMF
 
