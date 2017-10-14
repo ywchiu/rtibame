@@ -69,8 +69,7 @@
 ## Lab5
 
 ### 程式碼
-- http://rpubs.com/ywchiu/Demo20170723
-- http://rpubs.com/ywchiu/Demo20170723_2
+- http://rpubs.com/ywchiu/Demo20171014
 
 
 ## Lab6
