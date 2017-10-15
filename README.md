@@ -77,5 +77,8 @@
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20171015
 
+### 補充資料
+- https://www.slideshare.net/secret/eDAyreKYXJSyCi
+
 ### MNIST Example in R
 - https://gist.github.com/primaryobjects/b0c8333834debbc15be4
