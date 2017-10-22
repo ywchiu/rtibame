@@ -82,3 +82,8 @@
 
 ### MNIST Example in R
 - https://gist.github.com/primaryobjects/b0c8333834debbc15be4
+
+## Lab7
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20171022
