@@ -25,7 +25,7 @@
 ## Lab1
 
 ### 程式碼
-- http://rpubs.com/ywchiu/Demo20170916
+- http://rpubs.com/ywchiu/Demo20180225
 
 ### 作業資料連結
 - 使用者請下載 https://goo.gl/LA1j2L
@@ -39,51 +39,3 @@
 - 列舉中山區所有成交物件總價(total_price)前三名的地址(address)以及(total_price)，並將結果存放至一名為zhongshan的DataFrame結構中
 
 
-## Lab2
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20170917
-
-### 作業二
-- https://www.slideshare.net/secret/heLgnE6e9nBqMw
-
-## Lab3
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20171001
-
-### Visual Studio 2013 Redistributed
-- http://download.microsoft.com/download/9/0/5/905dbd86-d1b8-4d4b-8a50-cb0e922017b9/vcredist_x64.exe
-
-### 作業三
-- https://www.slideshare.net/secret/HIv7rUrPQWTBMF
-
-## Lab4
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20171007
-
-### 作業四
-- https://www.slideshare.net/secret/dM216HMMA1BtLF
-
-## Lab5
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20171014
-
-
-## Lab6
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20171015
-
-### 補充資料
-- https://www.slideshare.net/secret/eDAyreKYXJSyCi
-
-### MNIST Example in R
-- https://gist.github.com/primaryobjects/b0c8333834debbc15be4
-
-## Lab7
-
-### 程式碼
-- http://rpubs.com/ywchiu/Demo20171022
