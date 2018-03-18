@@ -43,3 +43,7 @@
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20180304
 
+## Lab3
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20180318
