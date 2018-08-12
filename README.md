@@ -27,4 +27,7 @@
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20180811
 
+## Lab2
 
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20180812
