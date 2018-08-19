@@ -31,3 +31,8 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20180812
+
+## Lab3
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20180819
