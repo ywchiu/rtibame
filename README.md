@@ -36,3 +36,8 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20180819
+
+## Lab4
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20180826
