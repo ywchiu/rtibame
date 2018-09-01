@@ -19,8 +19,7 @@
 - https://chrome.google.com/webstore/detail/infolite/ipjbadabbpedegielkhgpiekdlmfpgal
 
 ### 投影片
-- https://github.com/ywchiu/rtibame/blob/master/Slides/%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%B8%AB%E5%81%87%E6%97%A5%E7%B2%BE%E4%BF%AE%E7%8F%AD.pdf
-
+- https://github.com/ywchiu/rtibame/blob/master/Slides/20180811-%20R%E8%AA%9E%E8%A8%80%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%B2%BE%E4%BF%AE%E7%8F%AD.pdf
 
 ## Lab1
 
