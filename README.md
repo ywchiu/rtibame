@@ -41,3 +41,8 @@
 
 ### 程式碼
 - http://rpubs.com/ywchiu/Demo20180826
+
+## Lab5
+
+### 程式碼
+- http://rpubs.com/ywchiu/Demo20180901
