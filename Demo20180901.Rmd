@@ -1,0 +1,68 @@
+---
+title: "Demo20180901"
+author: "David Chiu"
+date: "2018年9月1日"
+output: html_document
+---
+
+```{r}
+library(C50)
+data(churn)
+head(churnTrain)
+colnames(churnTrain)
+dataset <- churnTrain[,4:20]
+
+str(dataset)
+
+library(rpart)
+fit <- rpart(churn ~., data = dataset)
+plot(fit, margin=0.1)
+text(fit)
+
+library(rpart.plot)
+rpart.plot(fit)
+
+
+predicted <- predict(fit, data = dataset, type = 'class')
+sum(predicted == dataset$churn) / length(dataset$churn)
+
+
+table(dataset$churn)
+2850 / (2850+483)
+
+
+table(dataset$churn, predicted)
+TOTAL_LOSS <- 1500 * 483 *24
+GIFT       <- 396 * 2000
+TOTAL_LOSS
+GIFT
+
+A <- c('Y' ,'N', 'Y')
+P <- c('Y', 'Y', 'Y')
+sum(as.numeric(A == P))
+sum(A == P) / length(A)
+
+
+set.seed(2)
+sample(1:42, 6)
+
+length(dataset$churn)
+
+set.seed(2)
+ind <- sample(2 , 3333,replace = TRUE, prob=c(0.7,0.3))
+table(ind)
+trainset <- dataset[ind == 1, ]
+testset <- dataset[ind == 2, ]
+nrow(trainset)
+nrow(testset)
+
+
+fit <- rpart(churn ~., data = trainset )
+train_predicted <- predict(fit, trainset, type = 'class')
+
+sum(train_predicted == trainset$churn) / length(trainset$churn)
+
+test_predicted <- predict(fit, testset, type = 'class')
+sum(test_predicted == testset$churn) / length(testset$churn)
+```
+
